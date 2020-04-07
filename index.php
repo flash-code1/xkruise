@@ -75,7 +75,7 @@
         </div>
       </header>
       <!-- FScreen-->
-      <section class="section parallax-container section-xl bg-gray-900" data-parallax-img="img/air1.jpg">
+      <section class="section parallax-container section-xl bg-gray-900" data-parallax-img="img/startext.jpg">
         <div class="parallax-content">
           <div class="container">
             <div class="product-creative-main text-center">
