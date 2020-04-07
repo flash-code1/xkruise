@@ -59,7 +59,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <h2 style="color: #FCAD0C;">X</h2><h4>kruise.com</h4>
+                    <h2 style="color: #FCAD0C;">X <b style="font-size: 12px;">kruise.com</b></h2>
                   </div>
                 </div>
                 <div class="rd-navbar-collapse">
