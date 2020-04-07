@@ -134,7 +134,7 @@
         </div>
       </section>
       <!-- Taxi Service App-->
-      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(imag/air2.jpg);">
+      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(img/air2.jpg);">
         <div class="container">
           <div class="row">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
@@ -151,21 +151,21 @@
           <h2 class="wow fadeIn">Testimonials</h2>
           <!-- Owl Carousel-->
           <div class="owl-carousel owl-style-1 wow fadeIn" data-wow-delay=".2s" data-items="1" data-dots="false" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="30" data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true" data-mouse-drag="false">
-            <blockquote class="quote-light"><img class="quote-light-avatar" src="images/testimonials-4-68x68.jpg" alt="" width="68" height="68"/>
+            <blockquote class="quote-light"><img class="quote-light-avatar" src="assets/img/faces/avatar.jpg" alt="" width="68" height="68"/>
               <p class="heading-5 quote-light-cite">Brittany Grant</p>
               <p class="quote-light-position">Regular Client</p>
               <div class="quote-light-text">
                 <p class="font-weight-regular heading-5">I found your service to be a 5-star experience. Our flight was delayed by two hours, so we arrived at the airport at 2am. However, the driver was waiting at the arrivals hall for us, when we finally got there. All the people we communicated with were pleasant and cheerful.</p>
               </div>
             </blockquote>
-            <blockquote class="quote-light"><img class="quote-light-avatar" src="images/testimonials-1-68x68.jpg" alt="" width="68" height="68"/>
+            <blockquote class="quote-light"><img class="quote-light-avatar" src="assets/img/faces/card-profile2-square.jpg" alt="" width="68" height="68"/>
               <p class="heading-5 quote-light-cite">Patrick Mills</p>
               <p class="quote-light-position">Regular Client</p>
               <div class="quote-light-text">
                 <p class="font-weight-regular heading-5">Everything went perfectly! Incredibly punctual, friendly drivers, and a very fast customer service that answered my questions within minutes the night before my return trip. I highly recommend booking here, and will definitely do so again in the future.</p>
               </div>
             </blockquote>
-            <blockquote class="quote-light"><img class="quote-light-avatar" src="images/testimonials-2-68x68.jpg" alt="" width="68" height="68"/>
+            <blockquote class="quote-light"><img class="quote-light-avatar" src="assets/img/faces/card-profile1-square.jpg" alt="" width="68" height="68"/>
               <p class="heading-5 quote-light-cite">Paul Johnston</p>
               <p class="quote-light-position">Regular Client</p>
               <div class="quote-light-text">
@@ -214,7 +214,7 @@
           <div class="row row-40 justify-content-center">
             <div class="col-md-6 wow fadeIn">
               <!-- Post Classic-->
-              <article class="post-classic"><a class="post-classic-media" href="#"><img class="post-classic-image" src="images/classic-blog-1-570x380.jpg" alt="" width="570" height="380"/></a>
+              <article class="post-classic"><a class="post-classic-media" href="#"><img class="post-classic-image" src="img/cheese-pizza.jpg" alt="" width="570" height="380"/></a>
                 <div class="post-classic-meta">
                   <div class="badge">News</div>
                   <time datetime="2019">Apr 1, 2020 at 10:41 am </time>
@@ -225,7 +225,7 @@
             </div>
             <div class="col-md-6 wow fadeIn" data-wow-delay=".2s">
               <!-- Post Classic-->
-              <article class="post-classic"><a class="post-classic-media" href="#"><img class="post-classic-image" src="images/classic-blog-2-570x380.jpg" alt="" width="570" height="380"/></a>
+              <article class="post-classic"><a class="post-classic-media" href="#"><img class="post-classic-image" src="img/taxi1.jpg" alt="" width="570" height="380"/></a>
                 <div class="post-classic-meta">
                   <div class="badge">News</div>
                   <time datetime="2019">Apr 4, 2020 at 10:41 am </time>
