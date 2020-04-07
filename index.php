@@ -4,9 +4,9 @@
   include("header.php");
   ?>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="ie-panel"><a href="#"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
-      <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-355x118.png" alt="" width="177" height="59"/></a>
+      <div class="preloader-logo"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-default-355x118.png" alt="" width="177" height="59"/></a>
       </div>
       <div class="preloader-body">
         <div class="cssload-container">
@@ -58,14 +58,15 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-default-355x118.png" alt="" width="177" height="59"/></a>
+                  <div class="rd-navbar-brand">
+                    <h2 style="color: #FCAD0C;">X</h2><h4>kruise.com</h4>
                   </div>
                 </div>
                 <div class="rd-navbar-collapse">
                   <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse-content"><span></span></button>
                   <div class="rd-navbar-collapse-content">
-                    <div class="link-icon-title"><a class="link-icon-1" href="tel:#"><span class="icon mdi mdi-phone"></span><span>1-800-1234-567</span></a></div>
-                    <div><a class="link-icon-1" href="mailto:#"><span class="icon mdi mdi-email-outline"></span><span>info@demolink.org</span></a></div>
+                    <div class="link-icon-title"><a class="link-icon-1" href="tel:#"><span class="icon mdi mdi-phone"></span><span>+234-8162-399-614</span></a></div>
+                    <div><a class="link-icon-1" href="mailto:#"><span class="icon mdi mdi-email-outline"></span><span>info@xkruise.com.ng</span></a></div>
                   </div>
                 </div>
               </div>
@@ -78,11 +79,11 @@
         <div class="parallax-content">
           <div class="container">
             <div class="product-creative-main text-center">
-              <p class="heading-1 product-creative-title"><a href="#">Reliable and Secure Way to Reach Any Point of the City</a></p>
+              <p class="heading-1 product-creative-title"><a href="#">Reliable and Secure Way to Reach Any Airport in the City</a></p>
               <div class="product-creative-text">
-                <p class="heading-5 text-white"> We provide affordable and fast way to find a taxi when and where you need it.</p>
+                <p class="heading-5 text-white"> We provide affordable and fast way to find a ride when and where you need it for as cheap as <b>N3000</b> .</p>
               </div>
-              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">1-800-1234-567</a></p><a class="button button-lg button-primary button-raven" href="book.php">order now</a>
+              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-8162-399-614</a></p><a class="button button-lg button-primary button-raven" href="book.php">order now</a>
             </div>
           </div>
         </div>
@@ -95,7 +96,7 @@
               <!-- Counter Modern-->
               <article class="counter-modern">
                 <div class="icon counter-modern-icon mdi mdi-car"></div>
-                <div class="counter-modern-main"><span>250</span><span></span></div>
+                <div class="counter-modern-main"><span>300</span><span></span></div>
                 <h4 class="font-weight-regular counter-modern-title">Fleet Vehicles</h4>
               </article>
             </div>
@@ -104,7 +105,7 @@
               <article class="counter-modern">
                 <div class="icon counter-modern-icon mdi mdi-account"></div>
                 <div class="counter-modern-main">
-                  <div class="counter">17</div>
+                  <div class="counter">69</div>
                 </div>
                 <h4 class="font-weight-regular counter-modern-title">Drivers</h4>
               </article>
@@ -137,9 +138,9 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
-              <h2 class="wow fadeIn">Express Taxi App</h2>
-              <p class="heading-5 wow fadeIn" data-wow-delay=".2s">Download our mobile app to make your taxi experience better than ever before!</p>
-              <p class="wow fadeIn" data-wow-delay=".4s">Our brand new taxi app is now available for Android and iOS! With its help, you can fully customize your next taxi order. This includes selecting a driver as well as picking a type of car or any additional services that we offer.</p><a class="button button-lg button-primary button-raven wow fadeIn" data-wow-delay=".6s" href="#">Download Now</a>
+              <h2 class="wow fadeIn">Xkruise</h2>
+              <p class="heading-5 wow fadeIn" data-wow-delay=".2s">Download our mobile app to make your ride experience better than ever before!(coming soon)</p>
+              <p class="wow fadeIn" data-wow-delay=".4s">Our brand new taxi app is will be available for Android and iOS! With its help, you can fully customize your next next order. This includes selecting a driver as well as picking a type of car or any additional services that we offer.</p><a class="button button-lg button-primary button-raven wow fadeIn" data-wow-delay=".6s" href="#">Download Now</a>
             </div>
           </div>
         </div>
@@ -183,19 +184,19 @@
               <!-- Box Classic-->
               <article class="box-classic"><a class="icon box-classic-icon fl-bigmug-line-map87" href="#"></a><a class="box-classic-main" href="#">
                   <h4 class="box-classic-title">Local Routes</h4>
-                  <p>We guarantee full taxi availability on any route in the city.</p></a></article>
+                  <p>We guarantee full ride availability to airport in the city.</p></a></article>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay=".3s">
               <!-- Box Classic-->
               <article class="box-classic"><a class="icon box-classic-icon fl-bigmug-line-planetary2" href="#"></a><a class="box-classic-main" href="#">
                   <h4 class="box-classic-title">Abroad Travels</h4>
-                  <p>When traveling abroad, you can also benefit from using our taxi.</p></a></article>
+                  <p>When traveling abroad, you can also benefit from using our ride pakage.</p></a></article>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay=".4s">
               <!-- Box Classic-->
               <article class="box-classic"><a class="icon box-classic-icon fl-bigmug-line-portfolio23" href="#"></a><a class="box-classic-main" href="#">
                   <h4 class="box-classic-title">Business Travels</h4>
-                  <p>Express offers the best taxi services to traveling businessmen.</p></a></article>
+                  <p>Express offers the best ride services to traveling businessmen.</p></a></article>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay=".5s">
               <!-- Box Classic-->
@@ -216,7 +217,7 @@
               <article class="post-classic"><a class="post-classic-media" href="#"><img class="post-classic-image" src="images/classic-blog-1-570x380.jpg" alt="" width="570" height="380"/></a>
                 <div class="post-classic-meta">
                   <div class="badge">News</div>
-                  <time datetime="2019">July 11, 2019 at 10:41 am </time>
+                  <time datetime="2019">Apr 1, 2020 at 10:41 am </time>
                 </div>
                 <h4 class="font-weight-regular post-classic-title"><a href="#">Finding Lost Property: Tips from Express on How to Find Things That You’ve Lost in a Taxi</a></h4>
                 <p>After an outing, you decide to catch a cab. You get home only to discover that you lost something really important in your taxi. Most people won’t bother to try to find the item. We...</p><a class="button button-link button-lg" href="#">Continue Reading</a>
@@ -227,7 +228,7 @@
               <article class="post-classic"><a class="post-classic-media" href="#"><img class="post-classic-image" src="images/classic-blog-2-570x380.jpg" alt="" width="570" height="380"/></a>
                 <div class="post-classic-meta">
                   <div class="badge">News</div>
-                  <time datetime="2019">July 11, 2019 at 10:41 am </time>
+                  <time datetime="2019">Apr 4, 2020 at 10:41 am </time>
                 </div>
                 <h4 class="font-weight-regular post-classic-title"><a href="#">Your #1 Guide On Selecting a Taxi Service for Business or Entertainment Trips in the United States</a></h4>
                 <p>A taxi is an essential component of the public transportation system. Whether you are calling a taxi to your home or office on a regular basis, or are visiting a strange city and need...</p><a class="button button-link button-lg" href="#">Continue Reading</a>
