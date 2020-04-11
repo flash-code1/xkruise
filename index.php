@@ -81,7 +81,8 @@
             <div class="product-creative-main text-center">
               <p class="heading-1 product-creative-title"><a href="#">Most Secure and Reliable Way of Getting to the Airport in Abuja</a></p>
               <div class="product-creative-text">
-                <p class="heading-5 text-white"> <h1 style="color:#ff5f19;">Get 20% </h1> <h1 style="color: #1b1818;"></h1> We provide affordable and fast way to find a ride when and where you need it for as cheap as <b>N3000</b> .</p>
+                <p class="heading-5 text-white"> <h1 style="color:#ff5f19;">GET 25% </h1> <h1 style="color: #1b1818;">OFF</h1>
+                <h4> Ride now for as Cheap as <b style="color: #C70039;">N3000</b> from any where in Abuja </h4> .</p>
               </div>
               <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-8162-399-614</a></p><a class="button button-lg button-primary button-raven" href="book.php">order now</a>
             </div>
