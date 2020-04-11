@@ -63,8 +63,8 @@
                 <div class="rd-navbar-collapse">
                   <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse-content"><span></span></button>
                   <div class="rd-navbar-collapse-content">
-                    <div class="link-icon-title"><a class="link-icon-1" href="tel:#"><span class="icon mdi mdi-phone"></span><span>1-800-1234-567</span></a></div>
-                    <div><a class="link-icon-1" href="mailto:#"><span class="icon mdi mdi-email-outline"></span><span>info@demolink.org</span></a></div>
+                    <div class="link-icon-title"><a class="link-icon-1" href="tel:#"><span class="icon mdi mdi-phone"></span><span>+234-80265-52227</span></a></div>
+                    <div><a class="link-icon-1" href="mailto:#"><span class="icon mdi mdi-email-outline"></span><span>info@xkruise.com.ng</span></a></div>
                   </div>
                 </div>
               </div>

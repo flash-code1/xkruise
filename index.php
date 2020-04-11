@@ -65,7 +65,7 @@
                 <div class="rd-navbar-collapse">
                   <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse-content"><span></span></button>
                   <div class="rd-navbar-collapse-content">
-                    <div class="link-icon-title"><a class="link-icon-1" href="tel:#"><span class="icon mdi mdi-phone"></span><span>+234-8162-399-614</span></a></div>
+                    <div class="link-icon-title"><a class="link-icon-1" href="tel:#"><span class="icon mdi mdi-phone"></span><span>+234-80265-52227</span></a></div>
                     <div><a class="link-icon-1" href="mailto:#"><span class="icon mdi mdi-email-outline"></span><span>info@xkruise.com.ng</span></a></div>
                   </div>
                 </div>
@@ -84,7 +84,7 @@
                 <p class="heading-5 text-white"> <h1  style="color: #1b1818;"> <b style="color:#ff5f19;"> GET 25% </b> OFF </h1>
                 <h4 style="color:  #f3efef;"> Ride now for as Cheap as <b style="color: #C70039;">N3000</b> from any where in Abuja </h4> .</p>
               </div>
-              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-8162-399-614</a></p><a class="button button-lg button-primary button-raven" href="book.php">order now</a>
+              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-80265-52227</a></p><a class="button button-lg button-primary button-raven" href="book.php">order now</a>
             </div>
           </div>
         </div>
