@@ -75,13 +75,13 @@
         </div>
       </header>
       <!-- FScreen-->
-      <section class="section parallax-container section-xl bg-gray-900" data-parallax-img="img/startext.jpg">
+      <section class="section parallax-container section-xl bg-gray-900" data-parallax-img="img/driver1.jpg">
         <div class="parallax-content">
           <div class="container">
             <div class="product-creative-main text-center">
-              <p class="heading-1 product-creative-title"><a href="#">Reliable and Secure Way to Reach Any Airport in the City</a></p>
+              <p class="heading-1 product-creative-title"><a href="#">Most Secure and Reliable Way of Getting to the Airport in Abuja</a></p>
               <div class="product-creative-text">
-                <p class="heading-5 text-white"> We provide affordable and fast way to find a ride when and where you need it for as cheap as <b>N3000</b> .</p>
+                <p class="heading-5 text-white"> <h1 style="color:#ff5f19;">Get 20% </h1> <h1 style="color: #1b1818;"></h1> We provide affordable and fast way to find a ride when and where you need it for as cheap as <b>N3000</b> .</p>
               </div>
               <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-8162-399-614</a></p><a class="button button-lg button-primary button-raven" href="book.php">order now</a>
             </div>
@@ -134,7 +134,7 @@
         </div>
       </section>
       <!-- Taxi Service App-->
-      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(img/driver1.jpg);">
+      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(img/startext.jpg);">
         <div class="container">
           <div class="row">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
