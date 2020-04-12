@@ -9,13 +9,6 @@
 <?php
   // get connections for all pages
   include("../functions/connect.php");
-  $sessint_id = $_SESSION["int_id"];
-  $inq = mysqli_query($connection, "SELECT * FROM institutions WHERE int_id='$sessint_id'");
-    if (count([$inq]) == 1) {
-      $n = mysqli_fetch_array($inq);
-      $int_name = $n['int_name'];
-      // $img = $n['img'];
-    }
 ?>
 <?php
 //active user
@@ -30,7 +23,7 @@ $rezz = mysqli_query($connection, $activeq);
 <html lang="en">
 
 <head>
-  <title><?php echo "$int_name - $page_title"?></title>
+  <title><?php echo "Xkruise - $page_title"?></title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
@@ -81,7 +74,7 @@ input[type=number] {
           <div class="card-profile">
             <div class="card-avatar">
                   <a href="#pablo">
-                    <img class="img" src="../functions/instimg/<?php echo $img; ?>" />
+                    <img class="img" src="../images/logo-default-355x118.png ?>" />
                   </a>
                 </div>
           </div>
@@ -96,74 +89,23 @@ input[type=number] {
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
-              <i class="material-icons">person</i>
-              Client
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="client.php">Client List</a>
-              <a href="manage_client.php" class="dropdown-item">Register Client</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
-              <i class="material-icons">people</i>
-              Group
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Group List</a>
-              <a href="#" class="dropdown-item">Register Group</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-haspopup="false" aria-expanded="fasle">
               <i class="material-icons">account_balance_wallet</i>
-              Transaction
+              Finance
             </a>
             <div class="dropdown-menu">
-              <a href="transact.php" class="dropdown-item">Deposit/Withdrwal</a>
-              <a href="#" class="dropdown-item">FTD Booking</a>
-              <a href="lend.php" class="dropdown-item">Book Loan</a>
-              <a href="#" class="dropdown-item">Expense Posting</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-haspopup="false" aria-expanded="fasle">
-              <i class="material-icons">library_books</i>
-              Approval
-            </a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">Account Opening</a>
-              <a href="transact_approval.php" class="dropdown-item">Transactions</a>
-              <a href="disbursement_approval.php" class="dropdown-item">Loan disbursement</a>
+              <a href="#" class="dropdown-item">Report Statistics</a>
+              <a href="#" class="dropdown-item">Cash Management</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
               <i class="material-icons">content_paste</i>
-              Reports
+              Feet Management
             </a>
             <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">Client Report</a>
-              <a href="#" class="dropdown-item">Group Report</a>
-              <a href="#" class="dropdown-item">Savings Report</a>
-              <a href="#" class="dropdown-item">Current Accounts Report</a>
-              <a href="loans.php" class="dropdown-item">Loan reoprts</a>
-              <a href="#" class="dropdown-item">Finacial reoprt</a>
-              <a href="#" class="dropdown-item">Audit</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-              <i class="material-icons">bubble_chart</i>
-              Products Summary
-            </a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">Savings Account</a>
-              <a href="#" class="dropdown-item">Current Account</a>
-              <a href="#" class="dropdown-item">Fixed Desposit</a>
-              <a href="#" class="dropdown-item">Shares</a>
-              <a href="loans.php" class="dropdown-item">Loans</a>
+              <a href="#" class="dropdown-item">Manage Vehicle</a>
+              <a href="#" class="dropdown-item">Manage Drivers</a>
             </div>
           </li>
           <li class="nav-item dropdown">
