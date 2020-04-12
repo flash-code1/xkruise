@@ -33,11 +33,6 @@ $username_err = $password_err = "";
 $err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    $testlog = $_POST["submit"];
-    $testsign = $_POST["submit"];
-
-    if ($testlog == "Login") {
         // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter Email.";
@@ -120,15 +115,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         
         // Close statement
-        mysqli_stmt_close($stmt);
     }
     
     // Close connection
     mysqli_close($link);
-    } else if ($testsign == "Signup") {
-        echo "this is a signup";
-    }
-    
+    mysqli_stmt_close($stmt);
 }
 
 include('functions/config.php');
@@ -217,7 +208,7 @@ include('functions/config.php');
                         <div class="box">
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
-                                <form method="post" html="{:multipart=>true}" data-remote="true" accept-charset="UTF-8">
+                                <form action="functions/client.php" method="post">
                                 <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
