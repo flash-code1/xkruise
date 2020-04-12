@@ -8,7 +8,8 @@ include("client.php");
 <body>
 <div class="content">
         <div class="container-fluid">
-          <!-- your content here -->
+		  <!-- your content here -->
+		  <div style="margin-top: 70px;"></div>
           <div class="row">
             <div class="col-md-8">
               <div class="card">
@@ -87,7 +88,7 @@ include("client.php");
 				  </div>
 			  </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Order Now</button>
+                    <button type="submit" class="btn btn-warning pull-right">Order Now</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
