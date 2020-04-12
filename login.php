@@ -34,10 +34,10 @@ $err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Check if username is empty
-    if(empty(trim($_POST["email"]))){
-        $username_err = "Please enter Email.";
+    if(empty(trim($_POST["username"]))){
+        $username_err = "Please enter Username.";
     } else{
-        $username = trim($_POST["email"]);
+        $username = trim($_POST["username"]);
     }
     
     // Check if password is empty
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT * FROM  WHERE users.email = ?";
+        $sql = "SELECT * FROM  WHERE users.username = ?";
         // $sqlj = "SELECT users.id, users.int_id, users.username, users.fullname, users.usertype, users.password, org_role, display_name FROM staff JOIN users ON users.id = staff.user_id WHERE users.username = "sam"";
         
         if($stmt = mysqli_prepare($link, $sql)){
@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $user_id, $int_id, $username, $fullname, $usertype, $employee_status, $hashed_password, $org_role, $display_name);
+                    mysqli_stmt_bind_result($stmt, $id, $username, $email, $usertype );
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
@@ -79,8 +79,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
+                            $_SESSION["email"] = $email;
                             $_SESSION["usertype"] = $usertype;
-                            $_SESSION["fullname"] = $fullname;
                             // $_SESSION["lastname"] = $lastname;
                             session_write_close();                            
                             //run a quick code to show active user
@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     }
                 } else{
                     // Display an error message if username doesn't exist
-                    $username_err = "No account found with that Email.";
+                    $username_err = "No account found with that Username.";
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -193,7 +193,7 @@ include('functions/config.php');
                                     <div><?php echo $err;?></div>
                                     <form method="post" accept-charset="UTF-8">
                                     <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                    <input id="email" class="form-control" type="text" placeholder="Username" name="username">
                                     <span class="help-block"><?php echo $username_err; ?></span>
                                     </div>
                                     <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
