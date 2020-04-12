@@ -87,7 +87,7 @@
                   <div class="card-icon">
                     <i class="material-icons">account_balance_wallet</i>
                   </div>
-                  <p class="card-category">Outstanding Loan Balance</p>
+                  <p class="card-category">Companies Revenue</p>
                   <!-- Populate with the total value of outstanding loans -->
                   <?php
                   $re = "SELECT SUM(amount) AS principal_amount FROM account_transaction";
@@ -120,9 +120,9 @@
                   <div class="ct-chart" id="dailySalesChart"></div>
                 </div>
                 <div class="card-body">
-                  <h4 class="card-title">Daily Loan Collection</h4>
+                  <h4 class="card-title">Daily Transaction</h4>
                   <p class="card-category">
-                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in loan collections</p>
+                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> Profit This Week</p>
                 </div>
                 <div class="card-footer">
                   <div class="stats">

@@ -74,7 +74,7 @@ input[type=number] {
           <div class="card-profile">
             <div class="card-avatar">
                   <a href="#pablo">
-                    <img class="img" src="../images/logo-default-355x118.png ?>" />
+                    <img class="img" src="../images/logo-default-355x118.png" />
                   </a>
                 </div>
           </div>
