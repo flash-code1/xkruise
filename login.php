@@ -132,7 +132,7 @@ if (isset($_GET["message1"])) {
     // $out = $_SESSION["lack_of_intfund_$key"];
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    echo $out = $_SESSION["lack_of_intfund_$key"];
+    $outx = "Account Successfully Created";
     $_SESSION["lack_of_intfund_$key"] = 0;
  }
 } else if (isset($_GET["message2"])) {
@@ -140,7 +140,7 @@ if (isset($_GET["message1"])) {
     // $out = $_SESSION["lack_of_intfund_$key"];
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    echo $out = $_SESSION["lack_of_intfund_$key"];
+    $outxx = "Account Creation Failed";
     $_SESSION["lack_of_intfund_$key"] = 0;
   }
 }
@@ -149,11 +149,13 @@ else if (isset($_GET["message3"])) {
     // $out = $_SESSION["lack_of_intfund_$key"];
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    echo $out = $_SESSION["lack_of_intfund_$key"];
+    $outxxx = "This Account Username or Password Exist Already";
     $_SESSION["lack_of_intfund_$key"] = 0;
   }
 }
-$out = "";
+$outx = "";
+$outxx = "";
+$outxxx = "";
 ?>
 
 <html lang="en">
@@ -217,6 +219,7 @@ $out = "";
                                 <div class="division">
                                     <div class="line l"></div>
                                       <span>or</span>
+                                      <div><?php echo $outx.$outxx.$outxx;?></div>
                                     <div class="line r"></div>
                                 </div>
                                 <div class="error"></div>
