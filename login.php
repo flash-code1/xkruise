@@ -181,8 +181,15 @@ if (isset($_GET["message1"])) {
   <!-- test -->
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-
-
+<!-- sd -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="datatable/jquery-3.3.2.js"></script>
+  <script src="datatable/jquery.dataTables.min.js"></script>
+  <script src="datatable/dataTables.bootstrap.min.js"></script>
+  <script src="datatable/DropdownSelect.js"></script>
+<!-- dd -->
   <link href="assetsk/css/bootstrap.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link href="assetsk/css/login-register.css" rel="stylesheet" />
