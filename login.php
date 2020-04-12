@@ -5,8 +5,14 @@
 
 	<meta charset="utf-8" />
 	<style>body{padding-top: 60px;}</style>
- <?php include('header.php'); ?>
+ <link href="assetsk/css/bootstrap.css" rel="stylesheet" />
 
+<link href="assetsk/css/login-register.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+<script src="assetsk/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assetsk/js/bootstrap.js" type="text/javascript"></script>
+<script src="assetsk/js/login-register.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="container">
