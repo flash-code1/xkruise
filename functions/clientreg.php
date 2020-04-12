@@ -12,13 +12,13 @@ $hash = password_hash($password, PASSWORD_DEFAULT);
 $usertype = "client";
 $status = "Not Active";
 
-$qrys = "SELECT * FROM users WHERE username = '$username' && email = '$email'";
+$qrys = "SELECT * FROM users";
 $res = mysqli_query($connection, $qrys);
 $row = mysqli_fetch_array($res);
 $ui = $row["username"];
 $ei = $row["password"];
 
-if ($ui == $username || $ei == $email) {
+if ($username == $ui || $email == $ei) {
     $_SESSION["Lack_of_intfund_$randms"] = "User Already Exists";
     echo header ("Location: ../login.php?message2=$randms");
 } else {
