@@ -133,7 +133,7 @@ if (isset($_GET["message1"])) {
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
     $out = $_SESSION["lack_of_intfund_$key"];
-    $_SESSION["lack_of_intfund_$key"] = 0;
+    // $_SESSION["lack_of_intfund_$key"] = 0;
  }
 } else if (isset($_GET["message2"])) {
     $key = $_GET["message2"];
@@ -141,7 +141,7 @@ if (isset($_GET["message1"])) {
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
     $out = $_SESSION["lack_of_intfund_$key"];
-    $_SESSION["lack_of_intfund_$key"] = 0;
+    // $_SESSION["lack_of_intfund_$key"] = 0;
   }
 }
 $out = "";
