@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $email, $usertype, $hashed_password );
+                    mysqli_stmt_bind_result($stmt, $id, $username, $email, $usertype, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
@@ -237,7 +237,7 @@ $out = "";
                                     <span class="help-block"><?php echo $username_err; ?></span>
                                     </div>
                                     <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password2">
                                     <span class="help-block"><?php echo $password_err; ?></span>
                                     </div>
                                     <input class="btn btn-default btn-login" type="submit" name="Login" value="Login">
