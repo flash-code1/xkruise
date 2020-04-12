@@ -118,7 +118,6 @@ input[type=number] {
               <a class="dropdown-item" href="config.php">Configuration</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="users.php">Staff Mgt.</a>
-              <a class="dropdown-item" href="branch.php">Branch</a>
               <!-- <a class="dropdown-item" href="#">Group</a> -->
               <a class="dropdown-item" href="#">Accounting</a>
               <div class="dropdown-divider"></div>

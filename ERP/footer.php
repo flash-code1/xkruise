@@ -3,14 +3,14 @@
           <nav class="float-left">
             <ul>
               <li>
-                <a href="#"><?php echo $int_name?></a>
+                <a href="#"><?php echo $username?></a>
               </li>
             </ul>
           </nav>
           <div class="copyright float-right">
             &copy;
               <i class="material-icons">group</i> 
-                <a target="blank" href="https://sekanisystems.com.ng/">Sekani Systems</a> 
+                <a target="blank" href="https://xkruise.com.ng/">Xkrusie</a> 
                 <script>
               document.write(new Date().getFullYear())
             </script>
