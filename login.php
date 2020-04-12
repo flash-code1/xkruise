@@ -132,16 +132,16 @@ if (isset($_GET["message1"])) {
     // $out = $_SESSION["lack_of_intfund_$key"];
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    $out = $_SESSION["lack_of_intfund_$key"];
-    // $_SESSION["lack_of_intfund_$key"] = 0;
+    echo $out = $_SESSION["lack_of_intfund_$key"];
+    $_SESSION["lack_of_intfund_$key"] = 0;
  }
 } else if (isset($_GET["message2"])) {
     $key = $_GET["message2"];
     // $out = $_SESSION["lack_of_intfund_$key"];
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    $out = $_SESSION["lack_of_intfund_$key"];
-    // $_SESSION["lack_of_intfund_$key"] = 0;
+    echo $out = $_SESSION["lack_of_intfund_$key"];
+    $_SESSION["lack_of_intfund_$key"] = 0;
   }
 }
 $out = "";
@@ -223,7 +223,6 @@ $out = "";
                                 <div class="form loginBox">
                                     <div><?php echo $err;?></div>
                                     <form method="post" accept-charset="UTF-8">
-                                    <span class="help-block"><?php echo $out; ?></span>
                                     <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                     <input id="email" class="form-control" type="text" placeholder="Username" name="username">
                                     <span class="help-block"><?php echo $username_err; ?></span>
