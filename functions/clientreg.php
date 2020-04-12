@@ -21,7 +21,7 @@ if (count([$res]) == 1) {
 
     if ($username !== $ui || $email !== $ei) {
         $queryuser = "INSERT INTO users (username, email, password, usertype, status)
-    VALUES ({$username}', '{$email}', '{$hash}', '{$usertype}', '{$status}')";
+    VALUES ('{$username}', '{$email}', '{$hash}', '{$usertype}', '{$status}')";
     
     $result = mysqli_query($connection, $queryuser);
     if ($result) {
