@@ -171,11 +171,10 @@ include('functions/config.php');
             <div class="col-sm-4"></div>
         </div> -->
                 <div class="row">
-                <div class="modal fade login" id="loginModal">
+                <div class="modal fade login" data-backdrop="static" id="loginModal">
 		      <div class="modal-dialog login animated">
     		      <div class="modal-content">
     		         <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Login with Xkruise</h4>
                     </div>
                     <div class="modal-body">
