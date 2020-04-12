@@ -184,7 +184,7 @@ if (isset($_GET["message1"])) {
 
 
   <link href="assetsk/css/bootstrap.css" rel="stylesheet" />
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link href="assetsk/css/login-register.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
