@@ -87,7 +87,7 @@
                 <p class="heading-5 text-white"> <h1  style="color: #1b1818;"> <b style="color:#ff5f19; font-size: 60px;"> GET 25% </b> OFF </h1>
                 <h4 style="color:  #f3efef;"> Ride now for as Cheap as <b style="color: #C70039;">N3000</b> from any where in Abuja </h4> .</p>
               </div>
-              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-80265-52227</a></p><a class="button button-lg button-primary button-raven big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" href="#" id="openlog">order now</a>
+              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-80265-52227</a></p><a class="button button-lg button-primary button-raven" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" href="#" id="openlog">order now</a>
             </div>
           </div>
         </div>

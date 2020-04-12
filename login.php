@@ -72,8 +72,6 @@
     </div>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#openlog').on("click", function(){
-            openLoginModal();
-        });
+      openLoginModal();
     });
 </script>
