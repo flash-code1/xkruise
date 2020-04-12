@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
+        $username_err = "Please enter Email.";
     } else{
         $username = trim($_POST["username"]);
     }
@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT users.id, staff.user_id, users.int_id, users.username, users.fullname, users.usertype,staff.employee_status, users.password, org_role, display_name FROM staff JOIN users ON users.id = staff.user_id WHERE users.username = ?";
+        $sql = "SELECT * FROM  WHERE users.email = ?";
         // $sqlj = "SELECT users.id, users.int_id, users.username, users.fullname, users.usertype, users.password, org_role, display_name FROM staff JOIN users ON users.id = staff.user_id WHERE users.username = "sam"";
         
         if($stmt = mysqli_prepare($link, $sql)){
@@ -79,35 +79,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             session_regenerate_id();
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["user_id"] = $user_id;
-                            $_SESSION["int_id"] = $int_id;
                             $_SESSION["username"] = $username;
                             $_SESSION["usertype"] = $usertype;
                             $_SESSION["fullname"] = $fullname;
-                            $_SESSION["org_role"] = $org_role;
-                            $_SESSION["employee_status"] = $employee_status;
                             // $_SESSION["lastname"] = $lastname;
                             session_write_close();                            
                             //run a quick code to show active user
                             // Redirect user to welcome page
-                            if ($stmt->num_rows ==1 && $_SESSION["usertype"] =="super_admin") {
-                              header("location: index.php");
+                            if ($stmt->num_rows ==1 && $_SESSION["usertype"] =="client") {
+                              header("location: book.php");
                             }elseif ($stmt->num_rows ==1 && $_SESSION["usertype"]=="admin"){
-                                header("location: mfi/index.php");
+                                header("location: ERP/index.php");
                             //   header("location: ./mfi/admin/dashboard.php");
                             }
                             elseif ($stmt->num_rows ==1 && $_SESSION["usertype"]=="staff") {
                                 if($_SESSION["employee_status"] == "Employed"){
-                                    header("location: mfi/index.php");
+                                    header("location: ERP/index.php");
                                   }
                                   elseif($_SESSION["employee_status"] == "Decommisioned"){
                                     $err = "Sorry You cannot login";
                                     $password = "";
                                   }
                             }
-                            elseif ($stmt->num_rows ==1 && $_SESSION["usertype"]=="super_staff") {
-                                header("location: ./modules/staff/dashboard.php");
-                              }
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -115,7 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     }
                 } else{
                     // Display an error message if username doesn't exist
-                    $username_err = "No account found with that username.";
+                    $username_err = "No account found with that Email.";
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -198,12 +191,13 @@ include('functions/config.php');
                                 </div>
                                 <div class="error"></div>
                                 <div class="form loginBox">
+                                    <div><?php echo $err;?></div>
                                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" accept-charset="UTF-8">
                                     <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                     <span class="help-block"><?php echo $username_err; ?></span>
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                     <span class="help-block"><?php echo $password_err; ?></span>
-                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    <input class="btn btn-default btn-login" type="submit" name="submit" type="button" value="Login" onclick="loginAjax()">
                                     </form>
                                 </div>
                              </div>
@@ -212,11 +206,11 @@ include('functions/config.php');
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
                                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" html="{:multipart=>true}" data-remote="true" accept-charset="UTF-8">
-                                <input id="email" class="form-control" type="email" placeholder="Email" name="email">
+                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <!-- <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation"> -->
-                                <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
+                                <input class="btn btn-default btn-register" type="submit" name="submit" value="Create account" name="commit">
                                 </form>
                                 </div>
                             </div>
