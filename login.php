@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $testlog = $_POST["submit"];
     $testsign = $_POST["submit"];
 
-    if ($testlog == "login") {
+    if ($testlog == "Login") {
         // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter Email.";
@@ -125,10 +125,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Close connection
     mysqli_close($link);
-    } else if ($testsign == "signup") {
+    } else if ($testsign == "Signup") {
         echo "this is a signup";
-    } else {
-        echo "this is nothing";
     }
     
 }
@@ -202,12 +200,16 @@ include('functions/config.php');
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <div><?php echo $err;?></div>
-                                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" accept-charset="UTF-8">
+                                    <for method="post" accept-charset="UTF-8">
+                                    <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                     <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                     <span class="help-block"><?php echo $username_err; ?></span>
+                                    </div>
+                                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                     <span class="help-block"><?php echo $password_err; ?></span>
-                                    <input class="btn btn-default btn-login" type="submit" name="login" type="button" value="Login">
+                                    </div>
+                                    <input class="btn btn-default btn-login" type="submit" name="Login" type="button" value="Login">
                                     </form>
                                 </div>
                              </div>
@@ -215,12 +217,12 @@ include('functions/config.php');
                         <div class="box">
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
-                                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" html="{:multipart=>true}" data-remote="true" accept-charset="UTF-8">
+                                <form method="post" html="{:multipart=>true}" data-remote="true" accept-charset="UTF-8">
                                 <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <!-- <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation"> -->
-                                <input class="btn btn-default btn-register" type="submit" name="signup" value="Signup" name="signup">
+                                <input class="btn btn-default btn-register" type="submit" name="Signup" value="Signup" name="Signup">
                                 </form>
                                 </div>
                             </div>
