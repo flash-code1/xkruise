@@ -84,7 +84,7 @@
             <div class="product-creative-main text-center">
               <p class="heading-1 product-creative-title"><a href="#">Most Secure and Reliable Way of Getting to the Airport in Abuja</a></p>
               <div class="product-creative-text">
-                <p class="heading-5 text-white"> <h1  style="color: #1b1818;"> <b style="color:#ff5f19; font-size: 40px;"> GET 25% </b> OFF </h1>
+                <p class="heading-5 text-white"> <h1  style="color: #1b1818;"> <b style="color:#ff5f19; font-size: 60px;"> GET 25% </b> OFF </h1>
                 <h4 style="color:  #f3efef;"> Ride now for as Cheap as <b style="color: #C70039;">N3000</b> from any where in Abuja </h4> .</p>
               </div>
               <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-80265-52227</a></p><a class="button button-lg button-primary button-raven" id="openlog">order now</a>
@@ -143,7 +143,7 @@
           <div class="row">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
               <h2 class="wow fadeIn">Xkruise</h2>
-              <p class="heading-5 wow fadeIn" data-wow-delay=".2s">Download our mobile app to make your ride experience better than ever before!(coming soon)</p>
+              <p class="heading-5 wow fadeIn" data-wow-delay=".2s">Xkruise Mobile Application (Will be Lunched on 10th of May)</p>
               <p class="wow fadeIn" data-wow-delay=".4s">Our brand new taxi app is will be available for Android and iOS! With its help, you can fully customize your next next order. This includes selecting a driver as well as picking a type of car or any additional services that we offer.</p><a class="button button-lg button-primary button-raven wow fadeIn" data-wow-delay=".6s" href="#">Download Now</a>
             </div>
           </div>
