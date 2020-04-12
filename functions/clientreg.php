@@ -19,7 +19,7 @@ if (count([$res]) == 1) {
     $ui = $x['username'];
     $ei = $x['password'];
 
-    if ($username !== $ui || $email !== $ei) {
+    if ($username !== $ui && $email !== $ei) {
         $queryuser = "INSERT INTO users (username, email, password, usertype, status)
     VALUES ('{$username}', '{$email}', '{$hash}', '{$usertype}', '{$status}')";
     
