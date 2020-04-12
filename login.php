@@ -126,6 +126,48 @@ include('functions/config.php');
 
 ?>
 
+<?php
+if (isset($_GET["message1"])) {
+    $key = $_GET["message1"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "success",
+            title: "Confirm Your EMail",
+            text: "Account Creation Successful, Check Your Mail",
+            showConfirmButton: false,
+            timer: 3000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+ }
+} else if (isset($_GET["message2"])) {
+    $key = $_GET["message2"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "error",
+            title: "Error In Account Creation",
+            text: "We Cannot Create This Account It Exists",
+            showConfirmButton: false,
+            timer: 2000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+  }
+}
+?>
+
 <html lang="en">
 <head>
   <title>Login</title>
@@ -208,7 +250,7 @@ include('functions/config.php');
                         <div class="box">
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
-                                <form action="functions/client.php" method="post">
+                                <form action="functions/clientreg.php" method="post">
                                 <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
