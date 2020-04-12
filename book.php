@@ -6,20 +6,34 @@ include("client.php");
 ?>
 
 <body>
-	<div id="booking" class="section">
-		<div class="section-center">
-			<div class="container">
-				<div style="margin-top: 20px;"></div>
-				<div class="row">
-					<div class="booking-form">
-<div class="card card-nav-tabs">
-  <div class="card-header card-header-warning">
-    Order Ride
-  </div>
-  <div class="card-body">
-	  <form action="">
-		  <div class="row">
-			  <div class="col-md-6">
+<div class="content">
+        <div class="container-fluid">
+          <!-- your content here -->
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title">Order Now</h4>
+                  <p class="card-category">Fill in all important data</p>
+                </div>
+                <div class="card-body">
+                  <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Display name</label>
+                          <input type="text" class="form-control" name="display_name">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Email address</label>
+                          <input type="email" class="form-control" name="email">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+					<div class="col-md-6">
 				  <div class="form-group">
                  <label class="label-control">PickUp Date</label>
                  <input type="date" class="form-control datetimepicker" name="date"/>
@@ -30,8 +44,10 @@ include("client.php");
                  <label class="label-control">PickUp Time</label>
                  <input type="time" class="form-control datetimepicker" name="date"/>
                   </div>
-			  </div>
-			  <div class="form-group col-md-3">
+                      </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group col-md-3">
                    <label for="inputState">Select Ride</label>
                    <select id="inputState" name="car" class="form-control" id="client_name">
 				   <option selected>Choose...</option>
@@ -82,25 +98,34 @@ include("client.php");
 </div>
 				  </div>
 			  </div>
-
-			  <div>
-			  <button type="submit" class="btn btn-primary btn-round btn-lg">
-				  ORDER
-			  </button>
-			  </div>
-		  </div>
-	  </form>
-    <!-- <h4 class="card-title">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#0" class="btn btn-primary">Go somewhere</a> -->
-  </div>
-</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Create Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="assets/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <!-- Get session data and populate user profile -->
+                <?php
+                $fullname = $_SESSION["username"];
+                ?>
+                <div class="card-body">
+                  <h4 class="card-title"> <?php echo $fullname?></h4>
+                  <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /content -->
+        </div>
+      </div>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
