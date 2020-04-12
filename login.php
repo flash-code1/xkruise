@@ -6,8 +6,6 @@
                  <a class="btn big-register" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Register</a></div>
             <div class="col-sm-4"></div>
         </div> -->
-
-
 		 <div class="modal fade login" id="loginModal">
 		      <div class="modal-dialog login animated">
     		      <div class="modal-content">
