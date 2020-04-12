@@ -200,7 +200,7 @@ include('functions/config.php');
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <div><?php echo $err;?></div>
-                                    <for method="post" accept-charset="UTF-8">
+                                    <form method="post" accept-charset="UTF-8">
                                     <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                     <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                     <span class="help-block"><?php echo $username_err; ?></span>
