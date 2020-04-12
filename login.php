@@ -4,12 +4,12 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  if($_SESSION["usertype"] == "super_admin"){
+  if($_SESSION["usertype"] == "client"){
     header("location: index.php");
     exit;
   } 
   elseif($_SESSION["usertype"] == "admin"){
-    header("location: ./modules/admin/dashboard.php");
+    header("location: ERP/index.php");
     exit;
   }
 //   elseif($_SESSION["usertype"] == "staff"){
@@ -34,7 +34,11 @@ $err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    // Check if username is empty
+    $testlog = $_POST["submit"];
+    $testsign = $_POST["submit"];
+
+    if ($testlog == "login") {
+        // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter Email.";
     } else{
@@ -121,6 +125,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Close connection
     mysqli_close($link);
+    } else if ($testsign == "signup") {
+        echo "this is a signup";
+    } else {
+        echo "this is nothing";
+    }
+    
 }
 
 include('functions/config.php');
@@ -197,7 +207,7 @@ include('functions/config.php');
                                     <span class="help-block"><?php echo $username_err; ?></span>
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                     <span class="help-block"><?php echo $password_err; ?></span>
-                                    <input class="btn btn-default btn-login" type="submit" name="submit" type="button" value="Login" onclick="loginAjax()">
+                                    <input class="btn btn-default btn-login" type="submit" name="login" type="button" value="Login">
                                     </form>
                                 </div>
                              </div>
@@ -210,7 +220,7 @@ include('functions/config.php');
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <!-- <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation"> -->
-                                <input class="btn btn-default btn-register" type="submit" name="submit" value="Create account" name="commit">
+                                <input class="btn btn-default btn-register" type="submit" name="signup" value="Signup" name="signup">
                                 </form>
                                 </div>
                             </div>
