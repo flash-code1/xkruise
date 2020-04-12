@@ -19,18 +19,6 @@ include("client.php");
                 <div class="card-body">
                   <form action="" method="POST" enctype="multipart/form-data">
                     <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Display name</label>
-                          <input type="text" class="form-control" name="display_name">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control" name="email">
-                        </div>
-                      </div>
                     </div>
                     <div class="row">
 					<div class="col-md-6">
@@ -99,7 +87,7 @@ include("client.php");
 				  </div>
 			  </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Create Profile</button>
+                    <button type="submit" class="btn btn-primary pull-right">Order Now</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
