@@ -138,7 +138,7 @@
         </div>
       </section>
       <!-- Taxi Service App-->
-      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(img/fleet3.jpg);">
+      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(img/fleet1.jpg);">
         <div class="container">
           <div class="row">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
