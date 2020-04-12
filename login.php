@@ -132,18 +132,7 @@ if (isset($_GET["message1"])) {
     // $out = $_SESSION["lack_of_intfund_$key"];
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    echo '<script type="text/javascript">
-    $(document).ready(function(){
-        swal({
-            type: "success",
-            title: "Confirm Your EMail",
-            text: "Account Creation Successful, Check Your Mail",
-            showConfirmButton: false,
-            timer: 3000
-        })
-    });
-    </script>
-    ';
+    $out = $_SESSION["lack_of_intfund_$key"];
     $_SESSION["lack_of_intfund_$key"] = 0;
  }
 } else if (isset($_GET["message2"])) {
@@ -151,21 +140,11 @@ if (isset($_GET["message1"])) {
     // $out = $_SESSION["lack_of_intfund_$key"];
     $tt = 0;
   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    echo '<script type="text/javascript">
-    $(document).ready(function(){
-        swal({
-            type: "error",
-            title: "Error In Account Creation",
-            text: "We Cannot Create This Account It Exists",
-            showConfirmButton: false,
-            timer: 2000
-        })
-    });
-    </script>
-    ';
+    $out = $_SESSION["lack_of_intfund_$key"];
     $_SESSION["lack_of_intfund_$key"] = 0;
   }
 }
+$out = "";
 ?>
 
 <html lang="en">
@@ -261,6 +240,7 @@ if (isset($_GET["message1"])) {
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
                                 <form action="functions/clientreg.php" method="post">
+                                <span class="help-block"><?php echo $out; ?></span>
                                 <input id="email" class="form-control" type="text" type="email" placeholder="Email" name="email">
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
