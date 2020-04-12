@@ -11,12 +11,11 @@
     <!-- for login -->
     <link href="assetsk/css/bootstrap.css" rel="stylesheet" />
 
-	<link href="assetsk/css/login-register.css" rel="stylesheet" />
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link href="assetsk/css/login-register.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
-	<script src="assetsk/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="assetsk/js/bootstrap.js" type="text/javascript"></script>
-	<script src="assetsk/js/login-register.js" type="text/javascript"></script>
-
+<script src="assetsk/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assetsk/js/bootstrap.js" type="text/javascript"></script>
+<script src="assetsk/js/login-register.js" type="text/javascript"></script>
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
