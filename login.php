@@ -1,13 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<style>body{padding-top: 60px;}</style> 
-    <?php include('header.php'); ?>
-</head>
-<body>
     <div class="container">
         <!-- <div class="row">
             <div class="col-sm-4"></div>
@@ -89,7 +79,3 @@
         });
     });
 </script>
-
-
-</body>
-</html>

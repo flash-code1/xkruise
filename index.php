@@ -78,7 +78,7 @@
         </div>
       </header>
       <!-- FScreen-->
-      <section class="section parallax-container section-xl bg-gray-900" data-parallax-img="img/fleet1.jpg">
+      <section class="section parallax-container section-xl bg-gray-900" data-parallax-img="img/driver1.jpg">
         <div class="parallax-content">
           <div class="container">
             <div class="product-creative-main text-center">
@@ -138,7 +138,7 @@
         </div>
       </section>
       <!-- Taxi Service App-->
-      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(img/startext.jpg);">
+      <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(img/fleet3.jpg);">
         <div class="container">
           <div class="row">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
