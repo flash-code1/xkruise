@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT username, email, usertype, password FROM users  WHERE users.username = ?";
+        $sql = "SELECT id, username, email, usertype, password FROM users WHERE users.username = ?";
         // $sqlj = "SELECT users.id, users.int_id, users.username, users.fullname, users.usertype, users.password, org_role, display_name FROM staff JOIN users ON users.id = staff.user_id WHERE users.username = "sam"";
         
         if($stmt = mysqli_prepare($link, $sql)){
@@ -169,15 +169,6 @@ $out = "";
   <!-- test -->
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-<!-- sd -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="datatable/jquery-3.3.2.js"></script>
-  <script src="datatable/jquery.dataTables.min.js"></script>
-  <script src="datatable/dataTables.bootstrap.min.js"></script>
-  <script src="datatable/DropdownSelect.js"></script>
-<!-- dd -->
   <link href="assetsk/css/bootstrap.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link href="assetsk/css/login-register.css" rel="stylesheet" />

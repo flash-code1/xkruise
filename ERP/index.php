@@ -19,7 +19,7 @@
                   <p class="card-category">Clients</p>
                   <!-- Populate with number of existing clients -->
                   <h3 class="card-title"><?php
-                   $query = "SELECT * FROM client";
+                   $query = "SELECT * FROM users WHERE usertype = 'client'";
                    $result = mysqli_query($connection, $query);
                    if ($result) {
                      $inr = mysqli_num_rows($result);
@@ -64,7 +64,7 @@
                   <p class="card-category">Logged in Staff</p>
                   <!-- Populate with number of logged in staff -->
                   <h3 class="card-title"><?php
-                   $query = "SELECT * FROM users WHERE int_id = '$sessint_id' && status = 'Active'";
+                   $query = "SELECT * FROM users WHERE status = 'Active'";
                    $result = mysqli_query($connection, $query);
                    if ($result) {
                      $inr = mysqli_num_rows($result);
@@ -90,7 +90,7 @@
                   <p class="card-category">Outstanding Loan Balance</p>
                   <!-- Populate with the total value of outstanding loans -->
                   <?php
-                  $re = "SELECT SUM(principal_amount) AS principal_amount FROM loan WHERE int_id = '$sessint_id'";
+                  $re = "SELECT SUM(amount) AS principal_amount FROM account_transaction";
                   $resultxx = mysqli_query($connection, $re);
                   if (count([$resultxx]) == 1) {
                   $jk = mysqli_fetch_array($resultxx); 
