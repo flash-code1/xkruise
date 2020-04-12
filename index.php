@@ -3,6 +3,9 @@
   <?php
   include("header.php");
   ?>
+  <?
+  include("login.php");
+  ?>
   <body>
     <div class="ie-panel"><a href="#"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
