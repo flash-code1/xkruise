@@ -209,7 +209,7 @@ include('functions/config.php');
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                     <span class="help-block"><?php echo $password_err; ?></span>
                                     </div>
-                                    <input class="btn btn-default btn-login" type="submit" name="Login" type="button" value="Login">
+                                    <input class="btn btn-default btn-login" type="submit" name="Login" value="Login">
                                     </form>
                                 </div>
                              </div>
@@ -247,40 +247,6 @@ include('functions/config.php');
         openLoginModal();
     });
 </script>
-          <!-- someh\thing -->
-                    <!-- <div class="col-md-7" style="margin-left:auto; margin-right:auto;">
-                    <div class="card">
-                        <div class="card-header card-header-primary">
-                        <h4 class="card-title">Login</h4>
-                        <h4 class="card-title"><?php echo $err;?></h4>
-                        <p class="card-category">Sign in</p>
-                        </div>
-                        <div class="card-body"> -->
-                        <!-- <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> -->
-                            <!-- <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                                    <label class="bmd-label-floating">Email</label>
-                                    <input type="text" value="<?php echo $username; ?>" class="form-control" name="username">
-                                    <span class="help-block"><?php echo $username_err; ?></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                                    <label class="bmd-label-floating">Password</label>
-                                    <input type="password" name="password" class="form-control" id="">
-                                    <span class="help-block"><?php echo $password_err; ?></span>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <button class="btn btn-primary pull-right" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Login</button>
-                            <button class="btn btn-danger" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Signup</button>
-                            <div class="clearfix"></div> -->
-                        <!-- </form> -->
-                        <!-- </div>
-                    </div>
-                    </div> -->
-                <!-- </div> -->
             </div>
         </div>
     </div>
