@@ -9,7 +9,7 @@ include("client.php");
 <div class="content">
         <div class="container-fluid">
 		  <!-- your content here -->
-		  <div style="margin-top: 70px;"></div>
+		  <div style="margin-top: 50px;"></div>
           <div class="row">
             <div class="col-md-8">
               <div class="card">
