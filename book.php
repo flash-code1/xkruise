@@ -1,32 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-	<title>Xride Booking</title>
-
-	<!-- Google font -->
-	<link href="http://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet" type="text/css" />
-	<link href="http://fonts.googleapis.com/css?family=Alice:400,700" rel="stylesheet" type="text/css" />
-
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap2.min.css" />
-
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style2.css" />
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
-</head>
+ 
+<?php 
+include("client.php");
+?>
 
 <body>
 	<div id="booking" class="section">
@@ -34,13 +11,62 @@
 			<div class="container">
 				<div class="row">
 					<div class="booking-form">
-						<div class="booking-bg">
-							<div class="form-header" style="margin-top: 120px;">
-								<h2>Book Your Ride Now!</h2>
-								<p>Get to the Airport at a very cheap price</p>
-								<p> <b> NGN 3,000</b> From AnyWhere is Abuja</p>
-							</div>
-						</div>
+<div class="card card-background" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D')">
+  <div class="card-body">
+    <h6 class="card-category text-info">Productivy Apps</h6>
+    <a href="#pablo">
+      <h3 class="card-title">The Best Productivity Apps on Market</h3>
+      </a>
+      <p class="card-description">
+      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+      </p>
+    <a href="#pablo" class="btn btn-white btn-link">
+      <i class="material-icons">subject</i> Read Article
+    </a>
+    <a href="#pablo" class="btn btn-white btn-link">
+      <i class="material-icons">watch_later</i> Watch Later
+    </a>
+  </div>
+</div>
+
+<div class="card card-nav-tabs">
+  <div class="card-header card-header-warning">
+    Order Ride
+  </div>
+  <div class="card-body">
+	  <form action="">
+		  <div class="row">
+			  <div class="col-md-6">
+			  <script>
+		 $('.datetimepicker').datetimepicker({
+    icons: {
+        time: "fa fa-clock-o",
+        date: "fa fa-calendar",
+        up: "fa fa-chevron-up",
+        down: "fa fa-chevron-down",
+        previous: 'fa fa-chevron-left',
+        next: 'fa fa-chevron-right',
+        today: 'fa fa-screenshot',
+        clear: 'fa fa-trash',
+        close: 'fa fa-remove'
+    }
+});
+</script>
+				  <div class="form-group">
+    <label class="label-control">Airport Datetime PickUp</label>
+    <input type="text" class="form-control datetimepicker" value="21/06/2018"/>
+   </div>
+			  </div>
+		  </div>
+	  </form>
+    <!-- <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#0" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+
+
 						<form>
 							<div class="row">
 								<div class="col-md-6">
