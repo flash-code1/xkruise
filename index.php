@@ -3,6 +3,9 @@
   <?php
   include("header.php");
   ?>
+  <?
+  include("login.php");
+  ?>
   <body>
     <div class="ie-panel"><a href="#"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
@@ -84,7 +87,7 @@
                 <p class="heading-5 text-white"> <h1  style="color: #1b1818;"> <b style="color:#ff5f19;"> GET 25% </b> OFF </h1>
                 <h4 style="color:  #f3efef;"> Ride now for as Cheap as <b style="color: #C70039;">N3000</b> from any where in Abuja </h4> .</p>
               </div>
-              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-80265-52227</a></p><a class="button button-lg button-primary button-raven" href="book.php">order now</a>
+              <p class="heading-2 product-creative-price text-primary"><a href="tel:#">+234-80265-52227</a></p><a class="button button-lg button-primary button-raven" id="openlog">order now</a>
             </div>
           </div>
         </div>
