@@ -147,27 +147,29 @@ include('functions/config.php');
   <!-- test -->
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <link href="assets/css/bootstrap.css" rel="stylesheet" />
 
-	<link href="assets/css/login-register.css" rel="stylesheet" />
+
+  <link href="assetsk/css/bootstrap.css" rel="stylesheet" />
+
+	<link href="assetsk/css/login-register.css" rel="stylesheet" />
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
-	<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.js" type="text/javascript"></script>
-	<script src="assets/js/login-register.js" type="text/javascript"></script>
+	<script src="assetsk/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assetsk/js/bootstrap.js" type="text/javascript"></script>
+	<script src="assetsk/js/login-register.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="content justify-content-between">
             <div class="container">
                 <!-- Login form -->
-                <div class="row">
+                <!-- <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
                  <a class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a>
                  <a class="btn big-register" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Register</a></div>
             <div class="col-sm-4"></div>
-        </div>
+        </div> -->
                 <!-- <div class="row"> -->
                 <div class="modal fade login" id="loginModal">
 		      <div class="modal-dialog login animated">
@@ -209,7 +211,8 @@ include('functions/config.php');
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
                                 <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
-                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="email" class="form-control" type="email" placeholder="Email" name="email">
+                                <input id="name" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
                                 <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
@@ -247,7 +250,7 @@ include('functions/config.php');
                         </div>
                         <div class="card-body">
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                     <label class="bmd-label-floating">Email</label>
@@ -262,9 +265,9 @@ include('functions/config.php');
                                     <span class="help-block"><?php echo $password_err; ?></span>
                                     </div>
                                 </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary pull-right">Login</button>
-                            <button type="reset" class="btn btn-danger ">Signup</button>
+                            </div> -->
+                            <button class="btn btn-primary pull-right" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Login</button>
+                            <button class="btn btn-danger" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Signup</button>
                             <div class="clearfix"></div>
                         </form>
                         </div>
