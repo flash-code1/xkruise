@@ -223,6 +223,7 @@ $out = "";
                                 <div class="form loginBox">
                                     <div><?php echo $err;?></div>
                                     <form method="post" accept-charset="UTF-8">
+                                    <span class="help-block"><?php echo $out; ?></span>
                                     <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                     <input id="email" class="form-control" type="text" placeholder="Username" name="username">
                                     <span class="help-block"><?php echo $username_err; ?></span>
@@ -240,7 +241,6 @@ $out = "";
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
                                 <form action="functions/clientreg.php" method="post">
-                                <span class="help-block"><?php echo $out; ?></span>
                                 <input id="email" class="form-control" type="text" type="email" placeholder="Email" name="email">
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">

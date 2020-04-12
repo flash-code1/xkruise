@@ -19,7 +19,7 @@ $ui = $row["username"];
 $ei = $row["password"];
 
 if ($ui == $username || $ei == $email) {
-    $_SESSION["Lack_of_intfund_$randms"] = "Registration Failed";
+    $_SESSION["Lack_of_intfund_$randms"] = "User Already Exists";
     echo header ("Location: ../login.php?message2=$randms");
 } else {
 $queryuser = "INSERT INTO users (username, email, password, usertype, status)
