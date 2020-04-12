@@ -34,7 +34,7 @@ if (count([$res]) == 1) {
     }
     } else {
         $_SESSION["Lack_of_intfund_$randms"] = "User Already Exists";
-        echo header ("Location: ../login.php?message2=$randms");
+        echo header ("Location: ../login.php?message3=$randms");
     }
 }
 ?>
