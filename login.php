@@ -185,7 +185,10 @@ if (isset($_GET["message1"])) {
 
   <link href="assetsk/css/bootstrap.css" rel="stylesheet" />
 
-	<link href="assetsk/css/login-register.css" rel="stylesheet" />
+    <link href="assetsk/css/login-register.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
 	<script src="assetsk/js/jquery-1.10.2.js" type="text/javascript"></script>
@@ -251,7 +254,7 @@ if (isset($_GET["message1"])) {
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
                                 <form action="functions/clientreg.php" method="post">
-                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="email" class="form-control" type="text" type="email" placeholder="Email" name="email">
                                 <input id="username" class="form-control" type="text" placeholder="Username" name="username">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <!-- <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation"> -->
