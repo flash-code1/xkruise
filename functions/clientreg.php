@@ -2,7 +2,7 @@
 include("connect.php");
 ?>
 <?php
-include("../client.php");
+include("client.php");
 ?>
 <?php
 $digits = 6;
@@ -39,7 +39,7 @@ if (count([$res]) == 1) {
     });
     </script>
     ';
-        // echo header ("Location: ../login.php");
+        echo header ("Location: ../login.php");
     } else {
         echo '<script type="text/javascript">
     $(document).ready(function(){
@@ -53,7 +53,7 @@ if (count([$res]) == 1) {
     });
     </script>
     ';
-        // echo header ("Location: ../login.php");
+        echo header ("Location: ../login.php");
     }
     } else {
         echo '<script type="text/javascript">
@@ -68,7 +68,7 @@ if (count([$res]) == 1) {
     });
     </script>
     ';
-        // echo header ("Location: ../login.php");
+        echo header ("Location: ../login.php");
     }
 }
 ?>
