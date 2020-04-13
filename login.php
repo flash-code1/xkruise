@@ -219,12 +219,12 @@ $outxxx = "";
                                 <div class="division">
                                     <div class="line l"></div>
                                       <span>or</span>
-                                      <div><?php echo $outx.$outxx.$outxx;?></div>
                                     <div class="line r"></div>
                                 </div>
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <div><?php echo $err;?></div>
+                                    <span class="help-block"><?php echo $outx.$outxx.$outxx;?></span>
                                     <form method="post" accept-charset="UTF-8">
                                     <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                     <input id="email" class="form-control" type="text" placeholder="Username" name="username">

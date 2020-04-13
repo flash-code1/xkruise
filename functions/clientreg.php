@@ -25,12 +25,8 @@ if (count([$res]) == 1) {
     
     $result = mysqli_query($connection, $queryuser);
     if ($result) {
-        echo "DB username: ".$ui;
-        echo "DB email: ".$ei;
-        echo "DB username: ".$username;
-        echo "DB email: ".$email;
-        // $_SESSION["Lack_of_intfund_$randms"] = "Registration Success";
-        // echo header ("Location: ../login.php?message1=$randms");
+        $_SESSION["Lack_of_intfund_$randms"] = "Registration Success";
+        echo header ("Location: ../login.php?message1=$randms");
     } else {
         $_SESSION["Lack_of_intfund_$randms"] = "Registration Failed";
        echo header ("Location: ../login.php?message2=$randms");
