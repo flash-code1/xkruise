@@ -18,17 +18,17 @@ if (count([$res]) == 1) {
     $x = mysqli_fetch_array($res);
     $ui = $x['username'];
     $ei = $x['password'];
-
+// proper
     if ($username !== $ui && $email !== $ei) {
         $queryuser = "INSERT INTO users (username, email, password, usertype, status)
     VALUES ('{$username}', '{$email}', '{$hash}', '{$usertype}', '{$status}')";
     
     $result = mysqli_query($connection, $queryuser);
     if ($result) {
-        echo $ui;
-        echo $ei;
-        echo $username;
-        echo $hash;
+        echo "DB username: ".$ui;
+        echo "DB email: ".$ei;
+        echo "DB username: ".$username;
+        echo "DB email: ".$email;
         // $_SESSION["Lack_of_intfund_$randms"] = "Registration Success";
         // echo header ("Location: ../login.php?message1=$randms");
     } else {
