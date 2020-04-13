@@ -18,27 +18,39 @@ include("client.php");
                   <p class="card-category">Fill in all important data</p>
                 </div>
                 <div class="card-body">
-                  <form action="" method="POST" enctype="multipart/form-data">
+                  <form action="functions/book_upload.php" method="POST" enctype="multipart/form-data">
                     <div class="row">
                     </div>
                     <div class="row">
 					<div class="col-md-6">
 				  <div class="form-group">
                  <label class="label-control">PickUp Date</label>
-                 <input type="date" class="form-control datetimepicker" name="date"/>
+                 <input type="date" class="form-control datetimepicker" name="pickup_date"/>
                   </div>
 			  </div>
 			  <div class="col-md-6">
 				  <div class="form-group">
                  <label class="label-control">PickUp Time</label>
-                 <input type="time" class="form-control datetimepicker" name="date"/>
+                 <input type="time" class="form-control datetimepicker" name="pickup_time"/>
                   </div>
-                      </div>
+            </div>
+            <div class="col-md-6">
+				  <div class="form-group">
+          <div class="input-group">
+         <div class="input-group-prepend">
+             <span class="input-group-text">
+               <i class="material-icons">navigation</i>
+             </span>
+            </div>
+            <input type="text" name="location" class="form-control" placeholder="Location">
+          </div>
+          </div>
+            </div>
                     </div>
                     <div class="row">
                     <div class="form-group col-md-3">
                    <label for="inputState">Select Ride</label>
-                   <select id="inputState" name="car" class="form-control" id="client_name">
+                   <select id="inputState" name="car_id" class="form-control" id="client_name">
 				   <option selected>Choose...</option>
 				   <?php
 				   function fill_client($connection) {
@@ -58,10 +70,11 @@ include("client.php");
 			  <div class="col-md-6">
 				  <div class="form-group">
                  <label class="label-control">Extra Cars?</label>
-                 <select id="inputState" name="extracars" class="form-control" id="price_of_cars">
-					 <option value="1">ONE</option>
-					 <option value="2">TWO</option>
-					 <option value="3">THREE</option>
+                 <select id="inputState" name="ext_ride" class="form-control" id="price_of_cars">
+           <option value="1">...</option>
+					 <option value="2">ONE</option>
+					 <option value="3">TWO</option>
+					 <option value="4">THREE</option>
                  </select>
                   </div>
 			  </div>
@@ -69,7 +82,7 @@ include("client.php");
 				  <div class="form-group">
 				  <div class="form-check form-check-radio">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="card" id="exampleRadios1" value="1" checked >
+        <input class="form-check-input" type="radio" name="pm" id="exampleRadios1" value="cash" checked >
         Card
         <span class="circle">
             <span class="check"></span>
@@ -78,7 +91,7 @@ include("client.php");
 </div>
 <div class="form-check form-check-radio">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="card" id="exampleRadios2" value="2">
+        <input class="form-check-input" type="radio" name="pm" id="exampleRadios2" value="card">
         Cash
         <span class="circle">
             <span class="check"></span>
