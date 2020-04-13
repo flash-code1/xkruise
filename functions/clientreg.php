@@ -39,8 +39,7 @@ if (count([$res]) == 1) {
     });
     </script>
     ';
-    $_SESSION["Lack_of_intfund_$randms"] = "Registration Failed";
-    echo header ("Location: ../login.php?message1=$randms");
+        // echo header ("Location: ../login.php");
     } else {
         echo '<script type="text/javascript">
     $(document).ready(function(){
@@ -54,8 +53,7 @@ if (count([$res]) == 1) {
     });
     </script>
     ';
-        $_SESSION["Lack_of_intfund_$randms"] = "Registration Failed";
-    echo header ("Location: ../login.php?message2=$randms");
+        // echo header ("Location: ../login.php");
     }
     } else {
         echo '<script type="text/javascript">
@@ -70,8 +68,7 @@ if (count([$res]) == 1) {
     });
     </script>
     ';
-    $_SESSION["Lack_of_intfund_$randms"] = "Registration Failed";
-    echo header ("Location: ../login.php?message3=$randms");
+        // echo header ("Location: ../login.php");
     }
 }
 ?>
