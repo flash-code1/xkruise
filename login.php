@@ -126,37 +126,6 @@ include('functions/config.php');
 
 ?>
 
-<?php
-if (isset($_GET["message1"])) {
-    $key = $_GET["message1"];
-    // $out = $_SESSION["lack_of_intfund_$key"];
-    $tt = 0;
-  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    $outx = "Account Successfully Created";
-    $_SESSION["lack_of_intfund_$key"] = 0;
- }
-} else if (isset($_GET["message2"])) {
-    $key = $_GET["message2"];
-    // $out = $_SESSION["lack_of_intfund_$key"];
-    $tt = 0;
-  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    $outxx = "Account Creation Failed";
-    $_SESSION["lack_of_intfund_$key"] = 0;
-  }
-}
-else if (isset($_GET["message3"])) {
-    $key = $_GET["message3"];
-    // $out = $_SESSION["lack_of_intfund_$key"];
-    $tt = 0;
-  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-    $outxxx = "This Account Username or Password Exist Already";
-    $_SESSION["lack_of_intfund_$key"] = 0;
-  }
-}
-$outx = "";
-$outxx = "";
-$outxxx = "";
-?>
 
 <html lang="en">
 <head>
@@ -224,7 +193,6 @@ $outxxx = "";
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <div><?php echo $err;?></div>
-                                    <span class="help-block"><?php echo $outx.$outxx.$outxx;?></span>
                                     <form method="post" accept-charset="UTF-8">
                                     <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                     <input id="email" class="form-control" type="text" placeholder="Username" name="username">
