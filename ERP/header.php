@@ -91,11 +91,11 @@ input[type=number] {
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-haspopup="false" aria-expanded="fasle">
               <i class="material-icons">account_balance_wallet</i>
-              Finance
+              Finance/Daily Order
             </a>
             <div class="dropdown-menu">
               <a href="#" class="dropdown-item">Report Statistics</a>
-              <a href="#" class="dropdown-item">Cash Management</a>
+              <a href="order.php" class="dropdown-item">Orders</a>
             </div>
           </li>
           <li class="nav-item dropdown">
