@@ -126,6 +126,73 @@ include('functions/config.php');
 
 ?>
 
+<?php
+include("functions/client.php");
+?>
+<?php
+if (isset($_GET["message1"])) {
+    $key = $_GET["message1"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "success",
+            title: "Done",
+            text: "Account Creation Successful",
+            showConfirmButton: false,
+            timer: 2000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+ }
+} else if (isset($_GET["message2"])) {
+    $key = $_GET["message2"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "error",
+            title: "Error",
+            text: "Account Creation Error",
+            showConfirmButton: false,
+            timer: 2000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+  }
+}
+else if (isset($_GET["message3"])) {
+    $key = $_GET["message3"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "error",
+            title: "Existing Account",
+            text: "Account Has Been Created",
+            showConfirmButton: false,
+            timer: 2000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+  }
+}
+$outx = "";
+$outxx = "";
+$outxxx = "";
+?>
 
 <html lang="en">
 <head>
