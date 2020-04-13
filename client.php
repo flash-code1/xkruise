@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!$_SESSION["usertype"] == "client"){
-      header("location: index.php");
+      header("location: login.php");
       exit;
   }
 ?>
