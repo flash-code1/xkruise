@@ -12,7 +12,7 @@ $hash = password_hash($password, PASSWORD_DEFAULT);
 $usertype = "client";
 $status = "Not Active";
 
-$res = mysqli_query($connection, "SELECT * FROM users WHERE username = '$username' && email = '$password'");
+$res = mysqli_query($connection, "SELECT * FROM users");
 
 if (count([$res]) == 1) {
     $x = mysqli_fetch_array($res);
