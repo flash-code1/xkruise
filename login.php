@@ -140,9 +140,9 @@ if (isset($_GET["message1"])) {
         swal({
             type: "success",
             title: "Done",
-            text: "Account Creation Successful",
+            text: "Account Creation Successful, Check Mail For Confirmation",
             showConfirmButton: false,
-            timer: 2000
+            timer: 5000
         })
     });
     </script>
@@ -161,7 +161,7 @@ if (isset($_GET["message1"])) {
             title: "Error",
             text: "Account Creation Error",
             showConfirmButton: false,
-            timer: 2000
+            timer: 4000
         })
     });
     </script>
@@ -179,9 +179,9 @@ else if (isset($_GET["message3"])) {
         swal({
             type: "error",
             title: "Existing Account",
-            text: "Account Has Been Created",
+            text: "Account Has Been Created Before",
             showConfirmButton: false,
-            timer: 2000
+            timer: 4000
         })
     });
     </script>
