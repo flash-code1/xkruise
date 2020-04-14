@@ -213,8 +213,6 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
         ?>
           <tr>
               <th class="text-center">Order Number</th>
-              <th>Car Type</th>
-              <th class="th-description">Plate Number</th>
               <th class="th-description">Pickup Date</th>
               <th class="text-right">Pickup Time</th>
               <th class="text-right">Extra Car</th>
