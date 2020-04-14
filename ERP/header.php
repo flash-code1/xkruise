@@ -104,7 +104,7 @@ input[type=number] {
               Feet Management
             </a>
             <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">Manage Vehicle</a>
+              <a href="fleet.php" class="dropdown-item">Manage Vehicle</a>
               <a href="#" class="dropdown-item">Manage Drivers</a>
             </div>
           </li>
