@@ -118,7 +118,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 					$out = '';
 					while ($row = mysqli_fetch_array($res))
 					{
-					  $out .= '<option value="'.$row["id"].'">'.$row["brand"].$row["name"].'</option>';
+					  $out .= '<option value="'.$row["id"].'">'.$row["brand"].' '.$row["name"].'</option>';
 					}
 					return $out;
 				  }
@@ -227,10 +227,10 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {?>
           <tr>
               <td>
-              <?php echo $row["id"]; ?>
+               <small><?php echo $row["id"]; ?></small>
               </td>
               <td class="td-name">
-                  <br><small><?php echo $row["pickup_date"]; ?></small>
+                <?php echo $row["pickup_date"]; ?>
               </td>
               <td>
               <?php echo $row["pickup_time"]; ?>
