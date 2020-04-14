@@ -218,7 +218,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
               <th class="text-right">Extra Car</th>
               <th class="text-right">Amount</th>
               <th class="text-right">Driver's Name</th>
-              <th>Edit</th>
+              <th>View</th>
               <th></th>
           </tr>
       </thead>
@@ -246,7 +246,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
               </td>
               <td class="td-number">
                   <div class="btn-group">
-                      <button class="btn btn-round btn-info btn-sm"> <i class="material-icons">add</i> </button>
+                      <button class="btn btn-round btn-info btn-sm"> <i class="material-icons">face</i> </button>
                   </div>
               </td>
               <td class="td-actions">
