@@ -180,6 +180,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                 ?>
                 <div class="card-body">
                   <h4 class="card-title"> <?php echo $fullname?></h4>
+                  <a class="dropdown-item" href="functions/logout.php">Log out</a>
                   <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
                 </div>
               </div>

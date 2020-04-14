@@ -119,6 +119,9 @@ if (isset($_GET["message1"])) {
                           ID
                         </th> -->
                         <tr>
+                          <th class="th-sm">
+                            Order No.
+                          </th>
                         <th class="th-sm">
                           Pickup Date
                         </th>
@@ -140,7 +143,7 @@ if (isset($_GET["message1"])) {
                       <?php if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {?>
                         <tr>
-                        <?php $row["id"]; ?>
+                         <th><?php $row["id"]; ?></th>
                           <th><?php echo $row["pickup_date"]; ?></th>
                           <th><?php echo $row["pickup_time"]; ?></th>
                           <th><?php echo $row["client_name"]; ?></th>
