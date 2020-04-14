@@ -4,7 +4,66 @@
 <?php 
 include("client.php");
 ?>
-
+<?php
+if (isset($_GET["message"])) {
+  $key = $_GET["message"];
+  // $out = $_SESSION["lack_of_intfund_$key"];
+  $tt = 0;
+if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+  echo '<script type="text/javascript">
+  $(document).ready(function(){
+      swal({
+          type: "success",
+          title: "Success",
+          text: "Booking Successful",
+          showConfirmButton: false,
+          timer: 2000
+      })
+  });
+  </script>
+  ';
+  $_SESSION["lack_of_intfund_$key"] = 0;
+}
+} else if (isset($_GET["message2"])) {
+  $key = $_GET["message2"];
+  // $out = $_SESSION["lack_of_intfund_$key"];
+  $tt = 0;
+if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+  echo '<script type="text/javascript">
+  $(document).ready(function(){
+      swal({
+          type: "error",
+          title: "Error",
+          text: "Booking Error",
+          showConfirmButton: false,
+          timer: 2000
+      })
+  });
+  </script>
+  ';
+  $_SESSION["lack_of_intfund_$key"] = 0;
+}
+} else if (isset($_GET["message3"])) {
+  $key = $_GET["message3"];
+  // $out = $_SESSION["lack_of_intfund_$key"];
+  $tt = 0;
+if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+  echo '<script type="text/javascript">
+  $(document).ready(function(){
+      swal({
+          type: "error",
+          title: "Error",
+          text: "Choose A Payment Option",
+          showConfirmButton: false,
+          timer: 2000
+      })
+  });
+  </script>
+  ';
+  $_SESSION["lack_of_intfund_$key"] = 0;
+}
+}
+?>
 <body>
 <div class="content">
         <div class="container-fluid">
@@ -71,10 +130,10 @@ include("client.php");
 				  <div class="form-group">
                  <label class="label-control">Extra Cars?</label>
                  <select id="inputState" name="ext_ride" class="form-control" id="price_of_cars">
-           <option value="1">...</option>
-					 <option value="2">ONE</option>
-					 <option value="3">TWO</option>
-					 <option value="4">THREE</option>
+           <option value="0">...</option>
+					 <option value="1">ONE</option>
+					 <option value="2">TWO</option>
+					 <option value="3">THREE</option>
                  </select>
                   </div>
 			  </div>
@@ -82,7 +141,7 @@ include("client.php");
 				  <div class="form-group">
 				  <div class="form-check form-check-radio">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="pm" id="exampleRadios1" value="card" checked >
+        <input class="form-check-input" type="radio" name="pm" id="exampleRadios1" value="card" disabled>
         Card
         <span class="circle">
             <span class="check"></span>
@@ -91,7 +150,7 @@ include("client.php");
 </div>
 <div class="form-check form-check-radio">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="pm" id="exampleRadios2" value="cash">
+        <input class="form-check-input" type="radio" name="pm" id="exampleRadios2" value="cash" checked>
         Cash
         <span class="circle">
             <span class="check"></span>
@@ -117,12 +176,97 @@ include("client.php");
                 <!-- Get session data and populate user profile -->
                 <?php
                 $fullname = $_SESSION["username"];
+                $cid = $_SESSION["id"];
                 ?>
                 <div class="card-body">
                   <h4 class="card-title"> <?php echo $fullname?></h4>
                   <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
                 </div>
               </div>
+
+              <div class="card">
+              <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Daily Order</h4>
+                  <script>
+                  $(document).ready(function() {
+                  $('#tabledat').DataTable();
+                  });
+                  </script>
+                  <!-- Insert number users institutions -->
+                  <p class="card-category"><?php
+                  $stat = "Not Verified";
+                   $query = "SELECT * FROM booking WHERE client_id ='$cid'";
+                   $result = mysqli_query($connection, $query);
+                   if ($result) {
+                     $inr = mysqli_num_rows($result);
+                     echo $inr;
+                   }?> Order</p>
+                </div>
+              <div class="card-body">
+              <div class="table-responsive">
+  <table class="table table-shopping">
+      <thead>
+      <?php
+          $query = "SELECT * FROM booking  WHERE client_id ='$cid' && status 'Not Verified'";
+          $result = mysqli_query($connection, $query);
+        ?>
+          <tr>
+              <th class="text-center">Order Number</th>
+              <th>Car Type</th>
+              <th class="th-description">Plate Number</th>
+              <th class="th-description">Pickup Date</th>
+              <th class="text-right">Pickup Time</th>
+              <th class="text-right">Extra Car</th>
+              <th class="text-right">Amount</th>
+              <th class="text-right">Driver's Name</th>
+              <th>Edit</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+      <?php if (mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {?>
+          <tr>
+              <td>
+              <?php echo $row["id"]; ?>
+              </td>
+              <td class="td-name">
+                  <br><small><?php echo $row["pickup_date"]; ?></small>
+              </td>
+              <td>
+              <?php echo $row["pickup_time"]; ?>
+              </td>
+              <td>
+              <?php echo $row["ext_ride"]; ?>
+              </td>
+              <td class="td-number">
+              <?php echo $row["amount"]; ?>
+              </td>
+              <td>
+              <?php echo $row["driver_name"]; ?>
+              </td>
+              <td class="td-number">
+                  <div class="btn-group">
+                      <button class="btn btn-round btn-info btn-sm"> <i class="material-icons">add</i> </button>
+                  </div>
+              </td>
+              <td class="td-actions">
+                  <button type="button" rel="tooltip" data-placement="left" title="Remove item" class="btn btn-simple">
+                      <i class="material-icons">close</i>
+                  </button>
+              </td>
+          </tr>
+          <?php }
+                          }
+                          else {
+                            // echo "0 Staff";
+                          }
+                          ?>
+      </tbody>
+  </table>
+</div>
+       </div>
+         </div>
             </div>
           </div>
           <!-- /content -->
