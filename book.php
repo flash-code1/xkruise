@@ -34,7 +34,7 @@ include("client.php");
                  <input type="time" class="form-control datetimepicker" name="pickup_time"/>
                   </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
 				  <div class="form-group">
           <div class="input-group">
          <div class="input-group-prepend">
@@ -82,7 +82,7 @@ include("client.php");
 				  <div class="form-group">
 				  <div class="form-check form-check-radio">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="pm" id="exampleRadios1" value="cash" checked >
+        <input class="form-check-input" type="radio" name="pm" id="exampleRadios1" value="card" checked >
         Card
         <span class="circle">
             <span class="check"></span>
@@ -91,7 +91,7 @@ include("client.php");
 </div>
 <div class="form-check form-check-radio">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="pm" id="exampleRadios2" value="card">
+        <input class="form-check-input" type="radio" name="pm" id="exampleRadios2" value="cash">
         Cash
         <span class="circle">
             <span class="check"></span>
