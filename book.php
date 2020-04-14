@@ -5,8 +5,8 @@
 include("client.php");
 ?>
 <?php
-if (isset($_GET["message"])) {
-  $key = $_GET["message"];
+if (isset($_GET["message1"])) {
+  $key = $_GET["message1"];
   // $out = $_SESSION["lack_of_intfund_$key"];
   $tt = 0;
 if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
@@ -184,7 +184,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-8">
             <div class="card">
               <div class="card-header card-header-primary">
                   <h4 class="card-title ">Daily Order</h4>
@@ -208,7 +208,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
   <table class="table table-shopping">
       <thead>
       <?php
-          $query = "SELECT * FROM booking  WHERE client_id ='$cid' && status 'Pending'";
+          $query = "SELECT * FROM booking  WHERE client_id ='$cid' && status = 'Pending'";
           $result = mysqli_query($connection, $query);
         ?>
           <tr>
