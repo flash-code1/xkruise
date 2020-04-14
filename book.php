@@ -118,7 +118,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 					$out = '';
 					while ($row = mysqli_fetch_array($res))
 					{
-					  $out .= '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+					  $out .= '<option value="'.$row["id"].'">'.$row["brand"].$row["name"].'</option>';
 					}
 					return $out;
 				  }
@@ -183,8 +183,9 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                   <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
                 </div>
               </div>
-
-              <div class="card">
+            </div>
+            <div class="col-md-12">
+            <div class="card">
               <div class="card-header card-header-primary">
                   <h4 class="card-title ">Daily Order</h4>
                   <script>
@@ -207,7 +208,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
   <table class="table table-shopping">
       <thead>
       <?php
-          $query = "SELECT * FROM booking  WHERE client_id ='$cid' && status 'Not Verified'";
+          $query = "SELECT * FROM booking  WHERE client_id ='$cid' && status 'Pending'";
           $result = mysqli_query($connection, $query);
         ?>
           <tr>

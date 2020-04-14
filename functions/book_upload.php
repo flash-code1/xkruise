@@ -38,7 +38,7 @@ $dun = $row["username"];
 $getdd = "SELECT * FROM `fleet_management` WHERE id = '$car_id' && status = 'Good'";
 $res = mysqli_query($connection, $getdd);
 $rowx = mysqli_fetch_array($res);
-$plate_no = $rowx["id"];
+$plate_no = $rowx["plate_number"];
 
 $stat = "Pending";
 
