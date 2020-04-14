@@ -134,6 +134,8 @@ if (isset($_GET["message1"])) {
                         <th class="th-sm">Total Amount</th>
                         <th class="th-sm">Currently Booked</th>
                         <th>Status</th>
+                        <th></th>
+                        <th></th>
                         </tr>
                         <!-- <th>Phone</th> -->
                       </thead>
@@ -148,6 +150,7 @@ if (isset($_GET["message1"])) {
                           <th><?php echo $row["car_img"]; ?></th>
                           <th><?php echo $row["amount"]; ?></th>
                           <th><?php echo $row["currently_used"]; ?></th>
+                          <th><?php echo $row["status"];?></th>
                           <td><a href="fleet_update.php?approve=<?php echo $row["id"];?>" class="btn btn-info">Edit</a></td>
                           <td><a href="fleet_management.php" class="btn btn-info">Add</a></td>
                           </tr>
