@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <link rel="stylesheet" href="main.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
+  <!-- <link rel="stylesheet" href="main.css"> -->
 <!-- for map -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> -->
   <script src="main.js"></script>
 <?php 
 include("client.php");
@@ -152,36 +152,33 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 				  </div>
         </div>
         <div class="col-md-12">
-        <button id="showMe" class="btn center-align">
-        <i class="material-icons">
-        my_location</i>
-          Click To Fill</button>
 				  <div class="form-group">
           <div class="input-group">
          <div class="input-group-prepend" for="address">
              <span class="input-group-text">
-               <i class="material-icons">navigation</i>
+               <i class="material-icons" id="showMe">navigation</i>
+               click to fill
              </span>
             </div>
             <textarea type="text" name="location" class="input_fields materialize-textarea" id="address" placeholder="Location"> </textarea>
           </div>
-          <div class="input-field">
+          <div class="form-group">
         <input class="input_fields" id="locality" type="text">
         <label class="active" for="locality">Locality</label>
       </div>
-      <div class="input-field">
+      <div class="form-group">
         <input class="input_fields" id="city" type="text">
         <label class="active" for="city">City/District/Town</label>
       </div>
-      <div class="input-field">
+      <div class="form-group">
         <input class="input_fields" id="postal_code" type="text">
         <label class="active" for="pin_code">Pin Code</label>
       </div>
-      <div class="input-field">
+      <div class="form-group">
         <input class="input_fields" id="landmark" type="text">
         <label class="active" for="landmark">Landmark</label>
       </div>
-      <div class="input-field">
+      <div class="form-group">
         <input class="input_fields" id="state" type="text">
         <label class="active" for="State">State</label>
       </div>
