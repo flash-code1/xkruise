@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 <link rel="stylesheet" href="main.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </head>
 <?php 
 include("client.php");
@@ -204,7 +204,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                 </div>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
               </div>
             </div>
             <div class="col-md-4">
