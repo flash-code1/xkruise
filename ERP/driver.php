@@ -104,7 +104,7 @@ else if (isset($_GET["message3"])) {
         <!-- <div class="fileinput-new thumbnail img-circle img-raised">
     	<img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" rel="nofollow" alt="...">
         </div> -->
-        <div class="fileinput-preview fileinput-exists thumbnail img-circle img-raised"></div>
+        <!-- <div class="fileinput-preview fileinput-exists thumbnail img-circle img-raised"></div> -->
         <div>
         <span class="btn btn-raised btn-round btn-rose btn-file">
             <span class="fileinput-new">Add Photo</span>
