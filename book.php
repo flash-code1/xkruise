@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
-  <!-- <link rel="stylesheet" href="main.css"> -->
+  <link rel="stylesheet" href="main.css">
 <!-- for map -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="main.js"></script>
 <?php 
 include("client.php");
@@ -81,6 +81,12 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                   <p class="card-category">Fill in all important data</p>
                 </div>
                 <div class="card-body">
+                <button id="showMe" class="btn center-align">
+    <i class="material-icons">
+        my_location
+    </i>
+    Use My Location
+  </button>
                   <form action="functions/book_upload.php" method="POST" enctype="multipart/form-data" id="billingAddress">
                     <div class="row">
                     </div>
