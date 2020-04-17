@@ -38,7 +38,7 @@ $destination = "users.php";
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Quantity</label>
                           <input type="text" class="form-control" name="amount">
@@ -46,7 +46,7 @@ $destination = "users.php";
                       </div>
                     </div>
                     <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-4">
     <div class="fileinput fileinput-new text-center" data-provides="fileinput">
         <!-- <div class="fileinput-new thumbnail img-circle img-raised">
     	<img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" rel="nofollow" alt="...">
@@ -61,8 +61,8 @@ $destination = "users.php";
             <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
         </div>
     </div>
-  </div>
-  <div class="col-md-6">
+  </div> <br>
+  <div class="col-md-4">
     <div class="fileinput fileinput-new text-center" data-provides="fileinput">
         <!-- <div class="fileinput-new thumbnail img-circle img-raised">
     	<img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" rel="nofollow" alt="...">
