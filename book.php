@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- for map -->
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-<link rel="stylesheet" href="main.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script src="js/main.js"></script>
-</head>
 <?php 
 include("client.php");
 ?>
@@ -163,38 +157,36 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 				  </div>
         </div>
         <div class="col-md-12">
-        <div id="locationList"></div>
-				  <div class="form-group">
-          <br>
-          <div class="input-group">
-         <div class="input-group-prepend" for="address">
-             <span class="input-group-text">
-               <i class="material-icons" id="showMe">navigation</i>
-               click to fill
-             </span>
-            </div>
-            <textarea type="text" name="location" class="input_fields materialize-textarea" id="address" placeholder="Location"> </textarea>
-          </div>
+        <div id="locationList"></div> <br/>
           <div class="form-group">
-        <input class="input_fields" id="locality" type="text">
-        <label class="active" for="locality">Locality</label>
-      </div>
-      <div class="form-group">
-        <input class="input_fields" id="city" type="text">
-        <label class="active" for="city">City/District/Town</label>
-      </div>
-      <div class="form-group">
-        <input class="input_fields" id="postal_code" type="text">
-        <label class="active" for="pin_code">Pin Code</label>
-      </div>
-      <div class="form-group">
-        <input class="input_fields" id="landmark" type="text">
-        <label class="active" for="landmark">Landmark</label>
-      </div>
-      <div class="form-group">
-        <input class="input_fields" id="state" type="text">
-        <label class="active" for="State">State</label>
-      </div>
+          <label class="bmd-label-floating">Address</label>
+          <input type="text" name="location" id="address" class="form-control">
+          </div>
+          <!-- for locality -->
+          <div class="form-group">
+          <label class="bmd-label-floating">Locality</label>
+          <input type="text" name="locality" id="locality" class="form-control">
+          </div>
+          <!-- for city  -->
+          <div class="form-group">
+          <label class="bmd-label-floating">City/District/Town</label>
+          <input type="text" name="city" id="city" class="form-control">
+          </div>
+          <!-- pin code -->
+          <div class="form-group">
+          <label class="bmd-label-floating">Postal Code</label>
+          <input type="text" name="postal" id="postal_code" class="form-control">
+          </div>
+          <!-- land mark -->
+          <div class="form-group">
+          <label class="bmd-label-floating">Land Mark</label>
+          <input type="text" name="land_mark" id="landmark" class="form-control">
+          </div>
+          <!-- state -->
+          <div class="form-group">
+          <label class="bmd-label-floating">State</label>
+          <input type="text" name="state" id="state" class="form-control">
+          </div>
           </div>
             </div>
                     </div>
@@ -203,8 +195,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                   </form>
                 </div>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
-  <script src="js/main.js"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
               </div>
             </div>
             <div class="col-md-4">
