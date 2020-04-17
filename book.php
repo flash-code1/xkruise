@@ -81,6 +81,10 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                   <p class="card-category">Fill in all important data</p>
                 </div>
                 <div class="card-body">
+                <div id="map">
+  </div>
+
+  <p id="current_position"></p>
                 <button id="showMe" class="btn center-align">
     <i class="material-icons">
         my_location
@@ -88,7 +92,6 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
     Use My Location
   </button>
                   <form action="functions/book_upload.php" method="POST" enctype="multipart/form-data" id="billingAddress">
-                  <div id="locationList"></div>
                     <div class="row">
                     </div>
                     <div class="row">
@@ -159,6 +162,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 				  </div>
         </div>
         <div class="col-md-12">
+        <div id="locationList"></div>
 				  <div class="form-group">
           <br>
           <div class="input-group">
