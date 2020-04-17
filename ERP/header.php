@@ -106,7 +106,7 @@ input[type=number] {
             </a>
             <div class="dropdown-menu">
               <a href="fleet.php" class="dropdown-item">Manage Vehicle</a>
-              <a href="#" class="dropdown-item">Manage Drivers</a>
+              <a href="drivers.php" class="dropdown-item">Manage Drivers</a>
             </div>
           </li>
           <li class="nav-item dropdown">

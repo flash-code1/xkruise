@@ -1,6 +1,6 @@
 <?php
 
-$page_title = "Add A Car";
+$page_title = "Add Car";
 $destination = "users.php";
     include("header.php");
 ?>
