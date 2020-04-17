@@ -147,7 +147,7 @@ if (isset($_GET["message1"])) {
                           <th><?php echo $row["brand"]; ?></th>
                           <th><?php echo $row["name"]; ?></th>
                           <th><?php echo $row["plate_number"]; ?></th>
-                          <th><?php echo $row["car_img"]; ?></th>
+                          <th><img src="../functions/Fleet/<?php echo $row["car_img"]; ?>" rel="nofollow" alt="..." height="70px" width="70px" class="avatar img-raised"></th>
                           <th><?php echo $row["amount"]; ?></th>
                           <th><?php echo $row["currently_used"]; ?></th>
                           <th><?php echo $row["status"];?></th>

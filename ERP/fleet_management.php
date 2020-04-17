@@ -40,44 +40,48 @@ $destination = "users.php";
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Amount</label>
+                          <label class="bmd-label-floating">Quantity</label>
                           <input type="text" class="form-control" name="amount">
                         </div>
                       </div>
                     </div>
                     <div class="row">
-                    <div class="col-md-4">
-                    <!-- insert passport -->
-                    <div class="form-group form-file-upload form-file-multiple">
-                     <input type="file" multiple="" class="inputFileHidden">
-                      <div class="input-group">
-                      <input type="text" name="image" class="form-control inputFileVisible" placeholder="Car Image">
-                        <span class="input-group-btn">
-                         <button type="button" class="btn btn-fab btn-round btn-primary">
-                         <i class="material-icons">attach_file</i>
-                         </button>
-                        </span>
-                       </div>
-                   </div>
-                  </div>
-                  <div class="col-md-4">
-                    <!-- insert passport -->
-                    <div class="form-group form-file-upload form-file-multiple">
-                     <input type="file" multiple="" class="inputFileHidden">
-                      <div class="input-group">
-                      <input type="text" name="car_doc" class="form-control inputFileVisible" placeholder="Car Document">
-                        <span class="input-group-btn">
-                         <button type="button" class="btn btn-fab btn-round btn-primary">
-                         <i class="material-icons">attach_file</i>
-                         </button>
-                        </span>
-                       </div>
-                   </div>
-                  </div>
+                  <div class="col-md-6">
+    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+        <!-- <div class="fileinput-new thumbnail img-circle img-raised">
+    	<img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" rel="nofollow" alt="...">
+        </div> -->
+        <!-- <div class="fileinput-preview fileinput-exists thumbnail img-circle img-raised"></div> -->
+        <div>
+        <span class="btn btn-raised btn-round btn-rose btn-file">
+            <span class="fileinput-new">Add Image</span>
+    	<span class="fileinput-exists">Change</span>
+    	<input type="file" name="car_img" /></span>
+            <br />
+            <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+        <!-- <div class="fileinput-new thumbnail img-circle img-raised">
+    	<img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" rel="nofollow" alt="...">
+        </div> -->
+        <!-- <div class="fileinput-preview fileinput-exists thumbnail img-circle img-raised"></div> -->
+        <div>
+        <span class="btn btn-raised btn-round btn-rose btn-file">
+            <span class="fileinput-new">Add Document</span>
+    	<span class="fileinput-exists">Change</span>
+    	<input type="file" name="document" /></span>
+            <br />
+            <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+        </div>
+    </div>
+  </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Status</label>
-                          <select name="user_t" id="" class="form-control">
+                          <select name="stat" id="" class="form-control">
                           <option value="good">Good Condition</option>
                             <option value="bad">Bad Condition</option>
                             <option value="worse">Not Good For Work</option>
