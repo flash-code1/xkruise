@@ -14,7 +14,7 @@ actionBtn.addEventListener('click', e => {
   actionBtn.style.display = "none";
 
   // call Materialize toast to update user 
-  M.toast({ html: 'I am fetching your current location', classes: 'rounded' });
+  swal({ title:"Good job!", text: "Loading Map!", type: "success", buttonsStyling: false, confirmButtonClass: "btn btn-success"})
 
   // get the user's position
   getLocation();
@@ -27,7 +27,7 @@ getLocation = () => {
 
   }
   else {
-    M.toast({ html: 'Sorry, your browser does not support this feature... Please Update your Browser to enjoy it', classes: 'rounded' });
+    swal({ title:"Bad!", text: "Can't Loan Map", type: "error", buttonsStyling: false, confirmButtonClass: "btn btn-success"})
   }
 }
 
