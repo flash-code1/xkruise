@@ -93,18 +93,6 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                  <input type="time" class="form-control datetimepicker" name="pickup_time"/>
                   </div>
             </div>
-            <div class="col-md-12">
-				  <div class="form-group">
-          <div class="input-group">
-         <div class="input-group-prepend">
-             <span class="input-group-text">
-               <i class="material-icons">navigation</i>
-             </span>
-            </div>
-            <input type="text" name="location" class="form-control" placeholder="Location">
-          </div>
-          </div>
-            </div>
                     </div>
                     <div class="row">
                     <div class="form-group col-md-3">
@@ -158,7 +146,46 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
     </label>
 </div>
 				  </div>
-			  </div>
+        </div>
+        <div class="col-md-12">
+        <button id="showMe" class="btn center-align">
+        <i class="material-icons">
+        my_location</i>
+          Click To Fill</button>
+				  <div class="form-group">
+          <div class="input-group">
+         <div class="input-group-prepend" for="address">
+             <span class="input-group-text">
+               <i class="material-icons">navigation</i>
+             </span>
+            </div>
+            <textarea type="text" name="location" class="input_fields materialize-textarea" id="address" placeholder="Location"> </textarea>
+          </div>
+          <div class="input-field">
+        <input class="input_fields" id="locality" type="text">
+        <label class="active" for="locality">Locality</label>
+      </div>
+      <div class="input-field">
+        <input class="input_fields" id="city" type="text">
+        <label class="active" for="city">City/District/Town</label>
+      </div>
+      <div class="input-field">
+        <input class="input_fields" id="postal_code" type="text">
+        <label class="active" for="pin_code">Pin Code</label>
+      </div>
+      <div class="input-field">
+        <input class="input_fields" id="landmark" type="text">
+        <label class="active" for="landmark">Landmark</label>
+      </div>
+      <div class="input-field">
+        <input class="input_fields" id="state" type="text">
+        <label class="active" for="State">State</label>
+      </div>
+          </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
+  <script src="js/main.js"></script>
                     </div>
                     <button type="submit" class="btn btn-warning pull-right">Order Now</button>
                     <div class="clearfix"></div>
