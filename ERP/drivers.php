@@ -142,7 +142,7 @@ if (isset($_GET["message1"])) {
                           <th><?php echo $row["username"]; ?></th>
                           <th><?php echo $row["email"]; ?></th>
                           <th><?php echo $row["status"]; ?></th>
-                          <th><img src="../functions/General/<?php echo $row["pic"]; ?>" rel="nofollow" alt="..." class="avatar img-raised"></th>
+                          <th><img src="../functions/General/<?php echo $row["pic"]; ?>" rel="nofollow" alt="..." height="70px" width="70px" class="avatar img-raised"></th>
                           <td><a href="update_driver.php?approve=<?php echo $row["id"];?>" class="btn btn-info">Edit</a></td>
                           <td><a href="driver.php" class="btn btn-info">Add</a></td>
                           </tr>
