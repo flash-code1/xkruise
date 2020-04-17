@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
   <link rel="stylesheet" href="main.css">
 <!-- for map -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -88,6 +88,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
     Use My Location
   </button>
                   <form action="functions/book_upload.php" method="POST" enctype="multipart/form-data" id="billingAddress">
+                  <div id="locationList"></div>
                     <div class="row">
                     </div>
                     <div class="row">
@@ -159,7 +160,6 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
         </div>
         <div class="col-md-12">
 				  <div class="form-group">
-          <div id="locationList"></div>
           <br>
           <div class="input-group">
          <div class="input-group-prepend" for="address">
@@ -194,7 +194,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
             </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
                     </div>
                     <button type="submit" class="btn btn-warning pull-right">Order Now</button>
                     <div class="clearfix"></div>
