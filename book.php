@@ -81,7 +81,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                   <p class="card-category">Fill in all important data</p>
                 </div>
                 <div class="card-body">
-                  <form action="functions/book_upload.php" method="POST" enctype="multipart/form-data">
+                  <form action="functions/book_upload.php" method="POST" enctype="multipart/form-data" id="billingAddress">
                     <div class="row">
                     </div>
                     <div class="row">
@@ -153,6 +153,8 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
         </div>
         <div class="col-md-12">
 				  <div class="form-group">
+          <div id="locationList"></div>
+          <br>
           <div class="input-group">
          <div class="input-group-prepend" for="address">
              <span class="input-group-text">
