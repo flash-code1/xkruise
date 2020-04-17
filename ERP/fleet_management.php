@@ -5,6 +5,67 @@ $destination = "users.php";
     include("header.php");
 ?>
 <!-- Content added here -->
+<?php
+if (isset($_GET["message1"])) {
+    $key = $_GET["message1"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "success",
+            title: "Done",
+            text: "Successfully Added",
+            showConfirmButton: false,
+            timer: 5000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+ }
+} else if (isset($_GET["message2"])) {
+    $key = $_GET["message2"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "error",
+            title: "Error",
+            text: "Error in Adding Car",
+            showConfirmButton: false,
+            timer: 4000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+  }
+}
+else if (isset($_GET["message3"])) {
+    $key = $_GET["message3"];
+    // $out = $_SESSION["lack_of_intfund_$key"];
+    $tt = 0;
+  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+    echo '<script type="text/javascript">
+    $(document).ready(function(){
+        swal({
+            type: "error",
+            title: "Existing Account",
+            text: "Car Plate Number Duplicate",
+            showConfirmButton: false,
+            timer: 4000
+        })
+    });
+    </script>
+    ';
+    $_SESSION["lack_of_intfund_$key"] = 0;
+  }
+}
+?>
     <div class="content">
         <div class="container-fluid">
           <!-- your content here -->
@@ -33,7 +94,7 @@ $destination = "users.php";
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Plate Number</label>
-                          <input type="email" class="form-control" name="plate_number">
+                          <input type="text" class="form-control" name="plate_number">
                         </div>
                       </div>
                     </div>
@@ -42,6 +103,16 @@ $destination = "users.php";
                         <div class="form-group">
                           <label class="bmd-label-floating">Quantity</label>
                           <input type="text" class="form-control" name="amount">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Status</label>
+                          <select name="stat" id="" class="form-control">
+                          <option value="good">Good Condition</option>
+                            <option value="bad">Bad Condition</option>
+                            <option value="worse">Not Good For Work</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -78,16 +149,6 @@ $destination = "users.php";
         </div>
     </div>
   </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Status</label>
-                          <select name="stat" id="" class="form-control">
-                          <option value="good">Good Condition</option>
-                            <option value="bad">Bad Condition</option>
-                            <option value="worse">Not Good For Work</option>
-                          </select>
-                        </div>
-                      </div>
                     </div>
                     <button type="submit" class="btn btn-primary pull-right">Create Profile</button>
                     <div class="clearfix"></div>

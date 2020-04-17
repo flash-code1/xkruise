@@ -43,14 +43,14 @@ if (count([$res]) == 1) {
     if ($result) {
        
         $_SESSION["Lack_of_intfund_$randms"] = "Registration Suc";
-         echo header ("Location: ../ERP/user.php?message1=$randms");
+         echo header ("Location: ../ERP/fleet_management.php?message1=$randms");
 } else {
         $_SESSION["Lack_of_intfund_$randms"] = "Registration Failed";
-        echo header ("Location: ../ERP/user.php?message2=$randms");
+        echo header ("Location: ../ERP/fleet_management.php?message2=$randms");
     }
 } else {
     $_SESSION["Lack_of_intfund_$randms"] = "Registration Ex";
-echo header ("Location: ../ERP/user.php?message3=$randms");
+echo header ("Location: ../ERP/fleet_management.php?message3=$randms");
 }
 }
 ?>
