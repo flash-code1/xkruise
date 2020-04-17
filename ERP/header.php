@@ -102,7 +102,7 @@ input[type=number] {
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
               <i class="material-icons">content_paste</i>
-              Feet Management
+              Fleet Management
             </a>
             <div class="dropdown-menu">
               <a href="fleet.php" class="dropdown-item">Manage Vehicle</a>

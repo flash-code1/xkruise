@@ -99,23 +99,22 @@ else if (isset($_GET["message3"])) {
                       </div>
                     </div>
                     <div class="row">
-                  <div class="col-md-4">
-                    <!-- insert passport -->
-                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
-                        <div class="fileinput-new thumbnail img-raised">
-                            <!-- <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" rel="nofollow" alt="..."> -->
-                        </div>
-                        <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
-                        <div>
-                            <span class="btn btn-raised btn-round btn-default btn-file">
-                                <span class="fileinput-new">Select picture</span>
-                                <span class="fileinput-exists">Change</span>
-                                <input type="file" name="pics"/>
-                            </span>
-                            <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
-                        </div>
-                    </div>
-                  </div>
+                    <div class="col-md-6">
+    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+        <div class="fileinput-new thumbnail img-circle img-raised">
+    	<img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" rel="nofollow" alt="...">
+        </div>
+        <div class="fileinput-preview fileinput-exists thumbnail img-circle img-raised"></div>
+        <div>
+        <span class="btn btn-raised btn-round btn-rose btn-file">
+            <span class="fileinput-new">Add Photo</span>
+    	<span class="fileinput-exists">Change</span>
+    	<input type="file" name="pics" /></span>
+            <br />
+            <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+        </div>
+    </div>
+  </div>
                     </div>
                     <button type="submit" class="btn btn-primary pull-right">Create Driver</button>
                     <div class="clearfix"></div>

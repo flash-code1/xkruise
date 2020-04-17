@@ -15,14 +15,25 @@ $status = "Not Active";
 session_start();
 $res = mysqli_query($connection, "SELECT * FROM users");
 
+$digits = 10;
+$temp = explode(".", $_FILES['pics']['name']);
+$randms = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
+$imagex = $randms. '.' .end($temp);
+
+if (move_uploaded_file($_FILES['pics']['tmp_name'], "General/" . $imagex)) {
+    $msg = "Image uploaded successfully";
+} else {
+  $msg = "Image Failed";
+}
+
 if (count([$res]) == 1) {
     $x = mysqli_fetch_array($res);
     $ui = $x['username'];
     $ei = $x['email'];
 // proper
     if ($username !== $ui && $email !== $ei) {
-        $queryuser = "INSERT INTO users (username, email, password, usertype, status)
-    VALUES ('{$username}', '{$email}', '{$hash}', '{$usertype}', '{$status}')";
+        $queryuser = "INSERT INTO users (username, email, password, usertype, status, pic)
+    VALUES ('{$username}', '{$email}', '{$hash}', '{$usertype}', '{$status}', '{$imagex}')";
     
     $result = mysqli_query($connection, $queryuser);
     if ($result) {

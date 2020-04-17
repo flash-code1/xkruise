@@ -128,6 +128,9 @@ if (isset($_GET["message1"])) {
                         <th class="th-sm">
                           Status
                         </th>
+                        <th class="th-sm">
+                          Image
+                        </th>
                         </tr>
                         <!-- <th>Phone</th> -->
                       </thead>
@@ -139,6 +142,7 @@ if (isset($_GET["message1"])) {
                           <th><?php echo $row["username"]; ?></th>
                           <th><?php echo $row["email"]; ?></th>
                           <th><?php echo $row["status"]; ?></th>
+                          <th><img src="../functions/General/<?php echo $row["pic"]; ?>" rel="nofollow" alt="..." class="avatar img-raised"></th>
                           <td><a href="update_user.php?approve=<?php echo $row["id"];?>" class="btn btn-info">Edit</a></td>
                           <td><a href="user.php" class="btn btn-info">Add</a></td>
                           </tr>
