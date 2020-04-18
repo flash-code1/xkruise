@@ -7,7 +7,7 @@ const actionBtn = document.getElementById('showMe');
 const locationsAvailable = document.getElementById('locationList');
 let Gmap, Gmarker;
 
-const __KEY = "AIzaSyB4P_0XbKNrYj4B44YT3wCGr9ONyo7UxJM";
+const __KEY = "AIzaSyB4P_0XbKNrYj4B44YT3wCGr9ONYo7UxJM";
 
 actionBtn.addEventListener('click', e => {
   // hide the button 
@@ -82,8 +82,8 @@ createMarker = (latlng) => {
     position: latlng,
     map: Gmap,
     animation: google.maps.Animation.BOUNCE,
-    clickable: true
-    // draggable: true
+    clickable: true,
+    draggable: true
   };
   Gmarker = new google.maps.Marker(markerOptions);
 

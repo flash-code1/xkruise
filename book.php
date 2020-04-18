@@ -205,7 +205,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                   </form>
                 </div>
                 <script src="js/main.js"></script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4P_0XbKNrYj4B44YT3wCGr9ONyo7UxJM"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4P_0XbKNrYj4B44YT3wCGr9ONYo7UxJM"></script>
               </div>
             </div>
             <div class="col-md-4">
