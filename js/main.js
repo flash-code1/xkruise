@@ -151,8 +151,8 @@ populateCard = (geoResults) => {
     const label = document.createElement('label');
 
     // then add materialize classes to the div and input
-    addressCard.classList.add("card");
-    input.classList.add("with-gap");
+    // addressCard.classList.add("card");
+    // input.classList.add("with-gap");
 
     // add attributes to them
     label.setAttribute("for", geoResult.place_id);
