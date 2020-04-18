@@ -7,7 +7,7 @@ const actionBtn = document.getElementById('showMe');
 const locationsAvailable = document.getElementById('locationList');
 let Gmap, Gmarker;
 
-const __KEY = "AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY";
+const __KEY = "AIzaSyB4P_0XbKNrYj4B44YT3wCGr9ONyo7UxJM";
 
 actionBtn.addEventListener('click', e => {
   // hide the button 
