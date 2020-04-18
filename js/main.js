@@ -14,36 +14,7 @@ actionBtn.addEventListener('click', e => {
   actionBtn.style.display = "none";
 
   // call Materialize toast to update user 
-  const showLoading = function() {
-    swal({
-      title: 'Finding Your Location',
-      allowEscapeKey: false,
-      allowOutsideClick: false,
-      timer: 2000,
-      onOpen: () => {
-        swal.showLoading();
-      }
-    }).then(
-      () => {},
-      (dismiss) => {
-        if (dismiss === 'timer') {
-          console.log('closed by timer!!!!');
-          swal({ 
-            title: 'Xkruise Has Seen You!',
-            type: 'success',
-            timer: 2000,
-            showConfirmButton: false
-          })
-        }
-      }
-    )
-  };
-  //showLoading();
-  
-  document.getElementById("fire")
-    .addEventListener('click', (event) => {
-      showLoading();
-    });
+  swal({ title:"Good job!", text: "Loaded Map!", type: "success", buttonsStyling: false, confirmButtonClass: "btn btn-success"})
 
   // get the user's position
   getLocation();
