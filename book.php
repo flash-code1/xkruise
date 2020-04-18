@@ -156,33 +156,43 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 </div>
 				  </div>
         </div>
-        <div class="col-md-12">
         <div id="locationList"></div> <br/>
+        <div class="col-md-4">
           <div class="form-group">
           <label class="bmd-label-floating">Address</label>
           <input type="text" name="location" id="address" class="form-control">
           </div>
+        </div>
           <!-- for locality -->
+          <div class="col-md-4">
           <div class="form-group">
           <label class="bmd-label-floating">Locality</label>
           <input type="text" name="locality" id="locality" class="form-control">
           </div>
+          </div>
           <!-- for city  -->
+          <div class="col-md-4">
           <div class="form-group">
           <label class="bmd-label-floating">City/District/Town</label>
           <input type="text" name="city" id="city" class="form-control">
           </div>
+          </div>
           <!-- pin code -->
+          <div class="col-md-4">
           <div class="form-group">
           <label class="bmd-label-floating">Postal Code</label>
           <input type="text" name="postal" id="postal_code" class="form-control">
           </div>
+          </div>
           <!-- land mark -->
+          <div class="col-md-4">
           <div class="form-group">
           <label class="bmd-label-floating">Land Mark</label>
           <input type="text" name="land_mark" id="landmark" class="form-control">
           </div>
+          </div>
           <!-- state -->
+          <div class="col-md-4">
           <div class="form-group">
           <label class="bmd-label-floating">State</label>
           <input type="text" name="state" id="state" class="form-control">
@@ -196,6 +206,25 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                 </div>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="assets/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <!-- Get session data and populate user profile -->
+                <?php
+                $fullname = $_SESSION["username"];
+                $cid = $_SESSION["id"];
+                ?>
+                <div class="card-body">
+                  <h4 class="card-title"> <?php echo $fullname?></h4>
+                  <a class="dropdown-item" href="functions/logout.php">Log out</a>
+                  <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
+                </div>
               </div>
             </div>
             <div class="col-md-8">
@@ -280,25 +309,6 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 </div>
        </div>
          </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-profile">
-                <div class="card-avatar">
-                  <a href="#pablo">
-                    <img class="img" src="assets/img/faces/marc.jpg" />
-                  </a>
-                </div>
-                <!-- Get session data and populate user profile -->
-                <?php
-                $fullname = $_SESSION["username"];
-                $cid = $_SESSION["id"];
-                ?>
-                <div class="card-body">
-                  <h4 class="card-title"> <?php echo $fullname?></h4>
-                  <a class="dropdown-item" href="functions/logout.php">Log out</a>
-                  <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
-                </div>
-              </div>
             </div>
           </div>
           <!-- /content -->
