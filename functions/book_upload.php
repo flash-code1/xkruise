@@ -34,6 +34,14 @@ $res = mysqli_query($connection, $getd);
 $row = mysqli_fetch_array($res);
 $di = $row["id"];
 $dun = $row["username"];
+// address
+$locality = $row["locality"];
+$city = $row["city"];
+$post_code = $row["postal_code"];
+$land_mark = $row["landmark"];
+$state = $row["state"];
+
+// later on for lng and lat
 
 $getdd = "SELECT * FROM `fleet_management` WHERE id = '$car_id' && status = 'Good'";
 $res = mysqli_query($connection, $getdd);
@@ -48,9 +56,11 @@ if ($dun == "" || $dun == NULL) {
 if($pm == "card") {
     $stat = "Paid";
     // if it is card confirm payment and save into booking and aslo Account Transaction
-    $csql = "INSERT INTO `booking` (`id`, `client_id`, `client_name`, `car_id`, `pickup_date`, `pickup_time`, `ext_ride`, `payment_method`, `status`, `amount`, `location`, `plate_number`, `driver_id`, `driver_name`) 
+    $csql = "INSERT INTO `booking` (`id`, `client_id`, `client_name`, `car_id`, `pickup_date`, `pickup_time`, `ext_ride`, `payment_method`, `status`, `amount`, `location`, `plate_number`, `driver_id`, `driver_name`,
+    `locality`, `city`, `postal_code`, `land_mark`, `state`) 
     VALUES ('{$reference}', '{$c_id}', '{$user}', '{$car_id}', '{$pickup_date}',
-    '{$pickup_time}', '{$ext_ride}', '{$pm}', '{$stat}', '{$amount}', '{$locate}', '{$plate_no}', '{$di}', '{$dun}')";
+    '{$pickup_time}', '{$ext_ride}', '{$pm}', '{$stat}', '{$amount}', '{$locate}', '{$plate_no}', '{$di}', '{$dun}',
+    '{$locate}', '{$city}', '{$post_code}', '{$land_mark}', '{$state}')";
     $res2 = mysqli_query($connection, $csql);
     if ($res2) {
         $_SESSION["Lack_of_intfund_$randms"] = "Oder Successful";

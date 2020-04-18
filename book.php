@@ -77,7 +77,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                   <p class="card-category">Fill in all important data</p>
                 </div>
                 <div class="card-body">
-                <div id="map">
+                <div id="map" style="height: 50vh; margin-bottom: 10px; display: none;">
                 </div>
   <p id="current_position"></p>
                 <button id="showMe" class="btn center-align">
@@ -157,7 +157,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 				  </div>
         </div>
         <div id="locationList"></div> <br/>
-        <div class="col-md-4">
+        <div class="col-md-12">
           <div class="form-group">
           <label class="bmd-label-floating">Address</label>
           <input type="text" name="location" id="address" class="form-control">
@@ -204,6 +204,7 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                     <div class="clearfix"></div>
                   </form>
                 </div>
+                <script src="js/main.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
               </div>
@@ -222,7 +223,8 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                 ?>
                 <div class="card-body">
                   <h4 class="card-title"> <?php echo $fullname?></h4>
-                  <a class="dropdown-item" href="functions/logout.php">Log out</a>
+                  <h4 class="card-title">Balance: $20.00</h4>
+                  <a class="dropdown-item" href="functions/logout.php">Logout</a>
                   <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
                 </div>
               </div>
