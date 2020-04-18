@@ -73,7 +73,7 @@ else if (isset($_GET["message3"])) {
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add New Staff</h4>
+                  <h4 class="card-title">Add New Driver</h4>
                   <p class="card-category">Fill in all important data</p>
                 </div>
                 <div class="card-body">

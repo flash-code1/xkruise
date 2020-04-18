@@ -102,7 +102,7 @@ else if (isset($_GET["message3"])) {
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Quantity</label>
-                          <input type="text" class="form-control" name="amount">
+                          <input type="number" class="form-control" name="amount">
                         </div>
                       </div>
                       <div class="col-md-4">

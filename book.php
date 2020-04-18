@@ -198,25 +198,6 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                 <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY"></script>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card card-profile">
-                <div class="card-avatar">
-                  <a href="#pablo">
-                    <img class="img" src="assets/img/faces/marc.jpg" />
-                  </a>
-                </div>
-                <!-- Get session data and populate user profile -->
-                <?php
-                $fullname = $_SESSION["username"];
-                $cid = $_SESSION["id"];
-                ?>
-                <div class="card-body">
-                  <h4 class="card-title"> <?php echo $fullname?></h4>
-                  <a class="dropdown-item" href="functions/logout.php">Log out</a>
-                  <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
-                </div>
-              </div>
-            </div>
             <div class="col-md-8">
             <div class="card">
               <div class="card-header card-header-primary">
@@ -299,6 +280,25 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
 </div>
        </div>
          </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="assets/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <!-- Get session data and populate user profile -->
+                <?php
+                $fullname = $_SESSION["username"];
+                $cid = $_SESSION["id"];
+                ?>
+                <div class="card-body">
+                  <h4 class="card-title"> <?php echo $fullname?></h4>
+                  <a class="dropdown-item" href="functions/logout.php">Log out</a>
+                  <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
+                </div>
+              </div>
             </div>
           </div>
           <!-- /content -->
