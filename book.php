@@ -206,7 +206,8 @@ if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
                 </div>
                 <script src="js/main.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVzdb11GALuPwJz8b0HJYg_UjBjFxms50"></script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVzdb11GALuPwJz8b0HJYg_UjBjFxms50&callback=initMap&libraries=places"
+            type="text/javascript"></script>
               </div>
             </div>
             <div class="col-md-4">
