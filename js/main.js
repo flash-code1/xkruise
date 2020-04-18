@@ -7,14 +7,43 @@ const actionBtn = document.getElementById('showMe');
 const locationsAvailable = document.getElementById('locationList');
 let Gmap, Gmarker;
 
-const __KEY = "AlzaSyCKjmDdU6X9UBNPO0nl-gHdpFhvngkxXAY";
+const __KEY = "AIzaSyDVzdb11GALuPwJz8b0HJYg_UjBjFxms50";
 
 actionBtn.addEventListener('click', e => {
   // hide the button 
   actionBtn.style.display = "none";
 
   // call Materialize toast to update user 
-  swal({ title:"Good job!", text: "Loading Map!", type: "success", buttonsStyling: false, confirmButtonClass: "btn btn-success"})
+  const showLoading = function() {
+    swal({
+      title: 'Finding Your Location',
+      allowEscapeKey: false,
+      allowOutsideClick: false,
+      timer: 2000,
+      onOpen: () => {
+        swal.showLoading();
+      }
+    }).then(
+      () => {},
+      (dismiss) => {
+        if (dismiss === 'timer') {
+          console.log('closed by timer!!!!');
+          swal({ 
+            title: 'Xkruise Has Seen You!',
+            type: 'success',
+            timer: 2000,
+            showConfirmButton: false
+          })
+        }
+      }
+    )
+  };
+  //showLoading();
+  
+  document.getElementById("fire")
+    .addEventListener('click', (event) => {
+      showLoading();
+    });
 
   // get the user's position
   getLocation();
