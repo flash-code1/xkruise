@@ -8,7 +8,7 @@ $destination = "order.php";
 <?php
 if (isset($_GET['approve']) && $_GET['approve'] !== '') {
   $appod = $_GET['approve'];
-  $checkm = mysqli_query($connection, "SELECT * FROM booking WHERE id = '$appod' status = 'Pending'");
+  $checkm = mysqli_query($connection, "SELECT * FROM booking WHERE id = '$appod' && status = 'Pending'");
   if (count([$checkm]) == 1) {
       $x = mysqli_fetch_array($checkm);
       $id = $x["id"];
