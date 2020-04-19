@@ -6,45 +6,63 @@ $destination = "index.php";
 
 ?>
 <?php
-if (isset($_GET["message1"])) {
-  $key = $_GET["message1"];
-  $tt = 0;
-  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-  echo '<script type="text/javascript">
-  $(document).ready(function(){
-      swal({
-          type: "success",
-          title: "Success",
-          text: "Successfully Approved",
-          showConfirmButton: false,
-          timer: 2000
-      })
-  });
-  </script>
-  ';
-  $_SESSION["lack_of_intfund_$key"] = 0;
- }
-} else if (isset($_GET["message2"])) {
-  $key = $_GET["message2"];
-  $tt = 0;
-  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-  echo '<script type="text/javascript">
-  $(document).ready(function(){
-      swal({
-          type: "error",
-          title: "Error",
-          text: "Approval Erro",
-          showConfirmButton: false,
-          timer: 2000
-      })
-  });
-  </script>
-  ';
-  $_SESSION["lack_of_intfund_$key"] = 0;
-}
-} else {
-  echo "";
-}
+// if (isset($_GET["message1"])) {
+//   $key = $_GET["message1"];
+//   $tt = 0;
+//   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+//   echo '<script type="text/javascript">
+//   $(document).ready(function(){
+//       swal({
+//           type: "success",
+//           title: "Success",
+//           text: "Successfully Approved",
+//           showConfirmButton: false,
+//           timer: 2000
+//       })
+//   });
+//   </script>
+//   ';
+//   $_SESSION["lack_of_intfund_$key"] = 0;
+//  }
+// } else if (isset($_GET["message2"])) {
+//   $key = $_GET["message2"];
+//   $tt = 0;
+//   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+//   echo '<script type="text/javascript">
+//   $(document).ready(function(){
+//       swal({
+//           type: "error",
+//           title: "Error",
+//           text: "Approval Erro",
+//           showConfirmButton: false,
+//           timer: 2000
+//       })
+//   });
+//   </script>
+//   ';
+//   $_SESSION["lack_of_intfund_$key"] = 0;
+// }
+// } else if (isset($_GET["message11"])) {
+//   $key = $_GET["message11"];
+//   $tt = 0;
+//   if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
+//   echo '<script type="text/javascript">
+//   $(document).ready(function(){
+//       swal({
+//           type: "success",
+//           title: "Error",
+//           text: "Declined Order",
+//           showConfirmButton: false,
+//           timer: 2000
+//       })
+//   });
+//   </script>
+//   ';
+//   $_SESSION["lack_of_intfund_$key"] = 0;
+// }
+// }else {
+//   echo "";
+// }
 ?>
 <!-- <link href="vendor/css/addons/datatables.min.css" rel="stylesheet">
 <script type="text/javascript" src="vendor/js/addons/datatables.min.js"></script> -->

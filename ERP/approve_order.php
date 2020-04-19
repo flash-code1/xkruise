@@ -78,8 +78,6 @@ if (isset($_GET['approve']) && $_GET['approve'] !== '') {
  $approve = $_POST['submit'];
  $decline = $_POST['submit'];
 
- $digits = 20;
-$randms1 = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
  if ($approve == 'approve') {
     $iupqx = "UPDATE institution_account SET balance = '$cash',
     total_business_profit = '$total_acct_prof', total_collected_card = '$mixpay', total_collected_cash = '$mixcash',
@@ -106,32 +104,104 @@ $randms1 = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
                      $bup = "UPDATE booking SET status = 'ORDERED' WHERE id = '$id'";
                      $res4 = mysqli_query($connection, $bup);
                      if($res4) {
-                        $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
-                        echo header ("Location: order.php?message1=$randms1");
+                        echo '<script type="text/javascript">
+  $(document).ready(function(){
+      swal({
+          type: "success",
+          title: "Success",
+          text: "Successfully Approved",
+          showConfirmButton: false,
+          timer: 2000
+      })
+  });
+  </script>
+  ';
+  $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
                      } else {
                         //  notify booking
-                        $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
-                        echo header ("Location: order.php?message2=$randms1");
+                        echo '<script type="text/javascript">
+                        $(document).ready(function(){
+                            swal({
+                                type: "error",
+                                title: "Error",
+                                text: "Approval Error",
+                                showConfirmButton: false,
+                                timer: 2000
+                            })
+                        });
+                        </script>
+                        ';
+                        $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
                      }
                  } else {
                     //  notify fleet
-                    $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
-                        echo header ("Location: order.php?message2=$randms1");
+                    echo '<script type="text/javascript">
+                    $(document).ready(function(){
+                        swal({
+                            type: "error",
+                            title: "Error",
+                            text: "Approval Error",
+                            showConfirmButton: false,
+                            timer: 2000
+                        })
+                    });
+                    </script>
+                    ';
+                    $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
                  }
              } else {
                 //  notify account transaction
-                $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
-                        echo header ("Location: order.php?message2=$randms1");
+                echo '<script type="text/javascript">
+                $(document).ready(function(){
+                    swal({
+                        type: "error",
+                        title: "Error",
+                        text: "Approval Error",
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                });
+                </script>
+                ';
+                $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
              }
         } else {
             // notify driver
-            $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
-                        echo header ("Location: order.php?message2=$randms1");
+            echo '<script type="text/javascript">
+                        $(document).ready(function(){
+                            swal({
+                                type: "error",
+                                title: "Error",
+                                text: "Approval Error",
+                                showConfirmButton: false,
+                                timer: 2000
+                            })
+                        });
+                        </script>
+                        ';
+                        $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
         }
     } else {
         // notify institution
-        $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
-                        echo header ("Location: order.php?message2=$randms1");
+        echo '<script type="text/javascript">
+                        $(document).ready(function(){
+                            swal({
+                                type: "error",
+                                title: "Error",
+                                text: "Approval Error",
+                                showConfirmButton: false,
+                                timer: 2000
+                            })
+                        });
+                        </script>
+                        ';
+                        $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
     }
  } else {
     $digits = 10;
@@ -143,8 +213,36 @@ $randms1 = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
        $deny = mysqli_query($connection, $take);
        if ($deny) {
         // notify
+        echo '<script type="text/javascript">
+  $(document).ready(function(){
+      swal({
+          type: "success",
+          title: "Error",
+          text: "Declined Order",
+          showConfirmButton: false,
+          timer: 2000
+      })
+  });
+  </script>
+  ';
+  $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
        } else {
         // notify
+        echo '<script type="text/javascript">
+        $(document).ready(function(){
+            swal({
+                type: "error",
+                title: "Error",
+                text: "Approval Error",
+                showConfirmButton: false,
+                timer: 2000
+            })
+        });
+        </script>
+        ';
+        $URL="order.php";
+echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
        }
      }
  }
