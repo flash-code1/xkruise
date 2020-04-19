@@ -52,7 +52,7 @@ if (isset($_GET['approve']) && $_GET['approve'] !== '') {
       $drive_no = $rod["account_no"];
 
     //   calculation for driver
-    $driver_amount = $amount - (($int_int / 100) * $amount);
+    $driver_amount = ($amount - (($int_int / 100) * $amount)) + $drive_amount;
 
     // institution account calculation
     $cash = $amount + $acct_bal;

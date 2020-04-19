@@ -1,7 +1,7 @@
 <?php
 
 $page_title = "Add Driver";
-$destination = "users.php";
+$destination = "drivers.php";
     include("header.php");
 ?>
 <?php

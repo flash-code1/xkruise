@@ -1,7 +1,7 @@
 <?php
 
 $page_title = "Add Car";
-$destination = "users.php";
+$destination = "fleet.php";
     include("header.php");
 ?>
 <!-- Content added here -->

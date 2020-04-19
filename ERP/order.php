@@ -82,7 +82,7 @@ $destination = "index.php";
                   </script>
                   <!-- Insert number users institutions -->
                   <p class="card-category"><?php
-                   $query = "SELECT * FROM booking";
+                   $query = "SELECT * FROM booking WHERE status = 'Pending'";
                    $result = mysqli_query($connection, $query);
                    if ($result) {
                      $inr = mysqli_num_rows($result);
