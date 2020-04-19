@@ -1,14 +1,14 @@
 <?php
 
 $page_title = "Approve/Verify Orders";
-$destination = "transact_approval.php";
+$destination = "order.php";
     include("header.php");
 
 ?>
 <?php
 if (isset($_GET['approve']) && $_GET['approve'] !== '') {
   $appod = $_GET['approve'];
-  $checkm = mysqli_query($connection, "SELECT * FROM order WHERE id = '$appod' status = 'Pending'");
+  $checkm = mysqli_query($connection, "SELECT * FROM booking WHERE id = '$appod' status = 'Pending'");
   if (count([$checkm]) == 1) {
       $x = mysqli_fetch_array($checkm);
       $id = $x["id"];
