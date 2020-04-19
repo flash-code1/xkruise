@@ -121,7 +121,7 @@ input[type=number] {
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="users.php">Staff Mgt.</a>
               <!-- <a class="dropdown-item" href="#">Group</a> -->
-              <a class="dropdown-item" href="account.php">Account Mgt.</a>
+              <!-- <a class="dropdown-item" href="account.php">Account Mgt.</a> -->
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Alerts</a>
             </div>

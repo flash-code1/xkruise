@@ -48,7 +48,7 @@
                    $qry = "SELECT * FROM fleet_management";
                    $qry2 = "SELECT * FROM fleet_management WHERE status = 'good'";
                    $rx1 = mysqli_query($connection, $qry);
-                   $rx2 = mysqli_query($connection, $qury2);
+                   $rx2 = mysqli_query($connection, $qry2);
                    if ($result) {
                      $inr = mysqli_num_rows($rx2);
                      $all = mysqli_num_rows($rx1);
@@ -104,7 +104,7 @@
                    $query = "SELECT * FROM users WHERE status = 'Active' && usertype = 'driver'";
                    $query2 = "SELECT * FROM users WHERE usertype = 'driver'";
                    $res2 = mysqli_query($connection, $query);
-                   $result = mysqli_query($connection, $query);
+                   $result = mysqli_query($connection, $query2);
                    if ($result) {
                      $inr = mysqli_num_rows($result);
                      $all = mysqli_num_rows($res2);
