@@ -71,9 +71,11 @@ if($pm == "card") {
     }
 } else if ($pm == "cash") {
     $stat = "Pending";
-    $csql = "INSERT INTO `booking` (`id`, `client_id`, `client_name`, `car_id`, `pickup_date`, `pickup_time`, `ext_ride`, `payment_method`, `status`, `amount`, `location`, `plate_number`, `driver_id`, `driver_name`) 
+    $csql = "INSERT INTO `booking` (`id`, `client_id`, `client_name`, `car_id`, `pickup_date`, `pickup_time`, `ext_ride`, `payment_method`, `status`, `amount`, `location`, `plate_number`, `driver_id`, `driver_name`,
+    `locality`, `city`, `postal_code`, `land_mark`, `state`) 
     VALUES ('{$reference}', '{$c_id}', '{$user}', '{$car_id}', '{$pickup_date}',
-    '{$pickup_time}', '{$ext_ride}', '{$pm}', '{$stat}', '{$amount}', '{$locate}', '{$plate_no}', '{$di}', '{$dun}')";
+    '{$pickup_time}', '{$ext_ride}', '{$pm}', '{$stat}', '{$amount}', '{$locate}', '{$plate_no}', '{$di}', '{$dun}',
+    '{$locate}', '{$city}', '{$post_code}', '{$land_mark}', '{$state}')";
     $res2 = mysqli_query($connection, $csql);
     if ($res2) {
         $_SESSION["Lack_of_intfund_$randms"] = "Oder Successful";

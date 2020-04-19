@@ -26,7 +26,7 @@ $rezz = mysqli_query($connection, $activeq);
   <title><?php echo "Xkruise - $page_title"?></title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="900;url=../functions/logout.php" />
+  <meta http-equiv="refresh" content="2000;url=../functions/logout.php" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!--     Fonts and icons     -->
@@ -96,7 +96,8 @@ input[type=number] {
             </a>
             <div class="dropdown-menu">
               <a href="#" class="dropdown-item">Report Statistics</a>
-              <a href="order.php" class="dropdown-item">Orders</a>
+              <a href="order.php" class="dropdown-item">New Orders</a>
+              <a href="old_orders.php" class="dropdown-item">Verified Orders</a>
             </div>
           </li>
           <li class="nav-item dropdown">
