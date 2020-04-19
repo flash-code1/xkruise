@@ -135,6 +135,7 @@ if (isset($_GET["message1"])) {
                           Payment Method
                         </th>
                         <th class="th-sm">Extra Ride</th>
+                        <th class="th-sm">Status</th>
                         <th>View</th>
                         </tr>
                         <!-- <th>Phone</th> -->
@@ -148,6 +149,7 @@ if (isset($_GET["message1"])) {
                           <th><?php echo $row["pickup_time"]; ?></th>
                           <th><?php echo $row["client_name"]; ?></th>
                           <th><?php echo $row["payment_method"]; ?></th>
+                          <th><?php echo $row["ext_ride"]; ?></th>
                           <th><?php echo $row["status"]; ?></th>
                           <td><a href="approve_order.php?approve=<?php echo $row["id"];?>" class="btn btn-info">View</a></td>
                           </tr>
