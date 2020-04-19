@@ -15,7 +15,7 @@ if (isset($_GET["message1"])) {
       swal({
           type: "success",
           title: "Success",
-          text: "Transaction Successfully Approved",
+          text: "Successfully Approved",
           showConfirmButton: false,
           timer: 2000
       })
@@ -33,43 +33,7 @@ if (isset($_GET["message1"])) {
       swal({
           type: "error",
           title: "Error",
-          text: "Error updating Cache",
-          showConfirmButton: false,
-          timer: 2000
-      })
-  });
-  </script>
-  ';
-  $_SESSION["lack_of_intfund_$key"] = 0;
-}
-} else if (isset($_GET["message3"])) {
-  $key = $_GET["message2"];
-  $tt = 0;
-  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-  echo '<script type="text/javascript">
-  $(document).ready(function(){
-      swal({
-          type: "error",
-          title: "Error",
-          text: "'.$out = $_SESSION["lack_of_intfund_$key"].'",
-          showConfirmButton: false,
-          timer: 2000
-      })
-  });
-  </script>
-  ';
-  $_SESSION["lack_of_intfund_$key"] = 0;
-}
-} else if (isset($_GET["message8"])) {
-  $key = $_GET["message8"];
-  $tt = 0;
-  if ($tt !== $_SESSION["lack_of_intfund_$key"]) {
-  echo '<script type="text/javascript">
-  $(document).ready(function(){
-      swal({
-          type: "success",
-          title: "Success",
-          text: "Transaction Has Been Declined",
+          text: "Approval Erro",
           showConfirmButton: false,
           timer: 2000
       })

@@ -51,7 +51,7 @@ $plate_no = $rowx["plate_number"];
 $stat = "Pending";
 
 if ($dun == "" || $dun == NULL) {
- $dun = "Pending";
+ $dun = "XKRUSE-DRIVER";
 }
 if($pm == "card") {
     $stat = "Paid";

@@ -21,6 +21,7 @@ if (isset($_GET['approve']) && $_GET['approve'] !== '') {
       $pay_meth = strtoupper($x["payment_method"]);
       $status = strtoupper($x["status"]);
       $amount = strtoupper($x["amount"]);
+      $drive_id = $x["driver_id"];
       $driver_name = strtoupper($x["driver_name"]);
 
       $getdd = "SELECT * FROM `fleet_management` WHERE id = '$car_id' && status = 'Good'";
@@ -28,12 +29,125 @@ if (isset($_GET['approve']) && $_GET['approve'] !== '') {
       $rowx = mysqli_fetch_array($res);
       $car_brand = strtoupper($rowx["brand"]);
       $car_name = strtoupper($rowx["name"]);
+      $fleetamt = $rowx["amount"];
+      $used = $rowx["currently_used"];
+
+    //   institution account
+    
+    $intact = "SELECT * FROM `institution_account` WHERE account_no = 'XK20200417'";
+      $rex = mysqli_query($connection, $intact);
+      $rox = mysqli_fetch_array($rex);
+      $int_int = $rox["total_interest_derived"];
+      $acct_bal = $rox["balance"];
+      $tot_bus_prof = $rox["total_business_profit"];
+      $tot_collected_card = $rox["total_collected_card"];
+      $tot_collected_cash = $rox["total_collected_cash"];
+
+    //   drivers account
+
+    $dvact = "SELECT * FROM `account` WHERE user_id = '$drive_id'";
+      $red = mysqli_query($connection, $dvact);
+      $rod = mysqli_fetch_array($red);
+      $drive_amount = $rod["amount"];
+      $drive_no = $rod["account_no"];
+
+    //   calculation for driver
+    $driver_amount = $amount - (($int_int / 100) * $amount);
+
+    // institution account calculation
+    $cash = $amount + $acct_bal;
+    $acct_prof = ($int_int / 100) * $amount;
+    $total_acct_prof = $int_int + $acct_prof;
+    if ($pay_meth == "card") {
+        $mixpay = $tot_collected_card + $amount;
+        $mixcash = $tot_collected_cash;
+    } else {
+        $mixcash = $tot_collected_cash + $amount;
+        $mixpay = $tot_collected_card;
+    }
+
+    $fleet_amt = $fleetamt - 1;
+    $fleet_used = $used + 1;
   }
 }
 ?>
 <?php
  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //  for a request
+ $ts = date('Y-m-d H:i:s');
+ $approve = $_POST['submit'];
+ $decline = $_POST['submit'];
+
+ $digits = 20;
+$randms1 = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
+ if ($approve == 'approve') {
+    $iupqx = "UPDATE institution_account SET balance = '$cash',
+    total_business_profit = '$total_acct_prof', total_collected_card = '$mixpay', total_collected_cash = '$mixcash',
+    last_active = '$ts'  WHERE account_no = 'XK20200417'";
+    $res = mysqli_query($connection, $iupqx);
+    // update booking
+    if ($res) {
+        $dup = "UPDATE account SET amount = '$driver_amount' WHERE user_id = '$drive_id'";
+        $res1 = mysqli_query($connection, $dup);
+        if ($res1) {
+            $intrans = "INSERT INTO `account_tansaction` (`transaction_id`,
+            `account_no`, `user_id`, `amount`, `transaction_type`,
+            `driver_account`, `x_interest_amount`)
+             VALUES ('{$id}', '{$drive_no}', '{$drive_id}', '{$amount}',
+             '{$pay_meth}', '{$driver_amount}', '{$acct_prof}')";
+
+             $res2 = mysqli_query($connection, $intrans);
+
+             if ($res2) {
+                 $fup = "UPDATE fleet_management SET amount = '$fleet_amt', currently_used = '$fleet_used'
+                 WHERE id = '$car_id'";
+                 $res3 = mysqli_query($connection, $fup);
+                 if ($res3) {
+                     $bup = "UPDATE booking SET status = 'ORDERED' WHERE id = '$id'";
+                     $res4 = mysqli_query($connection, $bup);
+                     if($res4) {
+                        $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
+                        echo header ("Location: order.php?message1=$randms1");
+                     } else {
+                        //  notify booking
+                        $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
+                        echo header ("Location: order.php?message2=$randms1");
+                     }
+                 } else {
+                    //  notify fleet
+                    $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
+                        echo header ("Location: order.php?message2=$randms1");
+                 }
+             } else {
+                //  notify account transaction
+                $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
+                        echo header ("Location: order.php?message2=$randms1");
+             }
+        } else {
+            // notify driver
+            $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
+                        echo header ("Location: order.php?message2=$randms1");
+        }
+    } else {
+        // notify institution
+        $_SESSION["Lack_of_intfund_$randms1"] = "Registration Suc";
+                        echo header ("Location: order.php?message2=$randms1");
+    }
+ } else {
+    $digits = 10;
+    $randms = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
+     if (isset($_GET['approve']) && $_GET['approve'] !== '') {
+       $appe = $_GET['approve'];
+       $dc = "declined";
+       $take = "UPDATE booking SET `status` = '$dc' WHERE id = '$appe'";
+       $deny = mysqli_query($connection, $take);
+       if ($deny) {
+        // notify
+       } else {
+        // notify
+       }
+     }
+ }
  }
 ?>
 <!-- Content added here -->
@@ -66,6 +180,12 @@ if (isset($_GET['approve']) && $_GET['approve'] !== '') {
                         <div class="form-group">
                           <label class="bmd-label-floating">Car</label>
                           <input type="text" class="form-control" name="car" value="<?php echo $car_brand ."-" . $car_name; ?>" readonly>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Plate Number</label>
+                          <input type="text" class="form-control" name="plate" value="<?php echo $plate; ?>" readonly>
                         </div>
                       </div>
                       <div class="col-md-6">

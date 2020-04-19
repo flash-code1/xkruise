@@ -26,21 +26,8 @@ if (count([$res]) == 1) {
     
     $result = mysqli_query($connection, $queryuser);
     if ($result) {
-        $res2 = mysqli_query($connection, "SELECT * FROM users WHERE username ='$username'");
-if (count([$res2]) == 1) {
-    $x = mysqli_fetch_array($res2);
-    $uid = $x['id'];
-    $amt = 0;
-    $acct = "INSERT INTO account (user_id, account_no, amount)
-    VALUES ('{$uid}', '{$acctno}', '{$amt}')";
-    $res3 = mysqli_query($connection, $acct);
-    if ($res3) {
         $_SESSION["Lack_of_intfund_$randms"] = "Registration Suc";
          echo header ("Location: ../login.php?message1=$randms");
-    } else {
-        echo header ("Location: ../login.php?message1=$randms");
-    }
-}
     } else {
         $_SESSION["Lack_of_intfund_$randms"] = "Registration Failed";
         echo header ("Location: ../login.php?message2=$randms");
