@@ -41,10 +41,19 @@
               <div class="card card-stats">
                 <div class="card-header card-header-danger card-header-icon">
                   <div class="card-icon">
-                  <i class="material-icons">info_outline</i>
+                  <i class="material-icons">local_taxi</i>
                   </div>
-                  <p class="card-category">Portfolio at Risk</p>
-                  <h3 class="card-title">NA</h3>
+                  <p class="card-category">Total/Good Fleet</p>
+                  <h3 class="card-title"><?php
+                   $qry = "SELECT * FROM fleet_management";
+                   $qry2 = "SELECT * FROM fleet_management WHERE status = 'good'";
+                   $rx1 = mysqli_query($connection, $qry);
+                   $rx2 = mysqli_query($connection, $qury2);
+                   if ($result) {
+                     $inr = mysqli_num_rows($rx2);
+                     $all = mysqli_num_rows($rx1);
+                     echo $all ."/".$inr;
+                   }?></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -61,14 +70,45 @@
                   <div class="card-icon">
                     <i class="fa fa-users"></i>
                   </div>
-                  <p class="card-category">Logged in Staff</p>
+                  <p class="card-category">Total/Active Staff</p>
                   <!-- Populate with number of logged in staff -->
                   <h3 class="card-title"><?php
-                   $query = "SELECT * FROM users WHERE status = 'Active'";
+                   $query1 = "SELECT * FROM users WHERE status = 'Active' && usertype = 'staff'";
+                   $query3 = "SELECT * FROM users WHERE usertype = 'staff'";
+                   $result1 = mysqli_query($connection, $query1);
+                   $res3 = mysqli_query($connection, $query3);
+                   if ($result) {
+                     $inr = mysqli_num_rows($result1);
+                     $all = mysqli_num_rows($res3);
+                     echo $all ."/".$inr;
+                   }?></h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <!-- Get current update time and display -->
+                    <!-- <i class="material-icons">update</i> Just Updated -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- g -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">person_pin</i>
+                  </div>
+                  <p class="card-category">Total/Active Drivers</p>
+                  <!-- Populate with number of logged in staff -->
+                  <h3 class="card-title"><?php
+                   $query = "SELECT * FROM users WHERE status = 'Active' && usertype = 'driver'";
+                   $query2 = "SELECT * FROM users WHERE usertype = 'driver'";
+                   $res2 = mysqli_query($connection, $query);
                    $result = mysqli_query($connection, $query);
                    if ($result) {
                      $inr = mysqli_num_rows($result);
-                     echo $inr;
+                     $all = mysqli_num_rows($res2);
+                     echo $all ."/".$inr;
                    }?></h3>
                 </div>
                 <div class="card-footer">
@@ -90,13 +130,13 @@
                   <p class="card-category">Companies Revenue</p>
                   <!-- Populate with the total value of outstanding loans -->
                   <?php
-                  $re = "SELECT SUM(amount) AS principal_amount FROM account_transaction";
+                  $re = "SELECT * from institution_account";
                   $resultxx = mysqli_query($connection, $re);
                   if (count([$resultxx]) == 1) {
                   $jk = mysqli_fetch_array($resultxx); 
-                  $sum = $jk['principal_amount'];
+                  $sum = $jk['balance'];
                   ?>
-                  <h3 class="card-title">NGN - <?php echo round($sum); ?></h3>
+                  <h3 class="card-title">NGN - <?php echo $sum; ?></h3>
                   <?php
                   }
                   ?>
